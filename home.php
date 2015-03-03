@@ -24,6 +24,14 @@ $statement = $gateway->getProducts();
     <body>
         <!--HOME AND LOGIN/OUT LINKS-->
         <?php require 'toolbar.php' ?>
-        <p>Welcome to the Department Store Web Site</p>
+        
+        <?php 
+        if (isset($message)) {
+            echo '<p>'.$message.'</p>';
+        }
+        ?>
+        <a href="viewProducts.php">Products</a>
+        <br>
+        <a href="viewShops.php">Shops</a>
     </body>
 </html>
