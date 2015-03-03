@@ -25,6 +25,7 @@ $statement = $gateway->getProducts();
         <!--HOME AND LOGIN/OUT LINKS-->
         <?php require 'toolbar.php' ?>
         
+        <!--NOTE: USER SEES DISPLAY OF PRODUCT AND STORES TABLES-->
         <?php 
         if (isset($message)) {
             echo '<p>'.$message.'</p>';
