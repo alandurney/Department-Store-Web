@@ -57,6 +57,10 @@ $statement = $gateway->getProductById($id);
                     echo '<td><b>Sale Price:   </b></td>'
                     . '<td>' . $row['salePrice'] . '</td>';
                     echo '</tr>';
+                    echo '<tr>';
+                    echo '<td><b>Store ID: </b></td>'
+                    . '<td>' . $row['storeID'] . '</td>';
+                    echo '</tr>';
                 ?>
             </tbody>
         </table>
