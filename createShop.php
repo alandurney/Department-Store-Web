@@ -22,4 +22,4 @@ $id = $gateway->insertShop($address, $manFName, $manLName, $phoneNo);
 
 $message = "Shop created successfully";
 
-header('Location: home.php');
+header("Location: viewShops.php");

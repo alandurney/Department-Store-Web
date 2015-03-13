@@ -23,7 +23,7 @@ $phoneNo = filter_input(INPUT_POST, 'phoneNo', FILTER_SANITIZE_STRING);
 
 $gateway->updateShop($shopID, $address, $manFName, $manLName, $phoneNo);
 
-header('Location: home.php');
+header('Location: viewShops.php');
 
 
 

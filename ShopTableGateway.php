@@ -22,12 +22,12 @@ class ShopTableGateway {
     }
     
     public function getShopById($id) {
-        $sqlQuery = "SELECT * FROM shop WHERE shopID = :shopID";
+        $sqlQuery = "SELECT * FROM shop WHERE storeID = :storeID";
         
         $statement = $this->connection->prepare($sqlQuery);
         
         $params = array(
-            "shopID" => $id
+            "storeID" => $id
         );
         
         $status = $statement->execute($params);
@@ -52,6 +52,12 @@ class ShopTableGateway {
             "phoneNo" => $pn
         );
         
+        echo '<pre>';
+        print_r($_POST);
+        print_r($params);
+        print_r($sqlQuery);
+        echo '</pre>';
+        
         $status = $statement->execute($params);
         
         if (!$status) {
@@ -65,11 +71,11 @@ class ShopTableGateway {
     
     //DELETE PRODUCT ROW BY ID
     public function deleteShop($sid) {
-        $sqlQuery = "DELETE FROM shop WHERE shopID = :shopID";
+        $sqlQuery = "DELETE FROM shop WHERE storeID = :storeID";
 
         $statement = $this->connection->prepare($sqlQuery);
         $params = array(
-            "shopID" => $sid
+            "storeID" => $sid
         );
 
         $status = $statement->execute($params);
@@ -84,16 +90,16 @@ class ShopTableGateway {
     public function updateShop($sid, $a, $mfn, $mln, $pn) {
         $sqlQuery =
                 "UPDATE shop SET " .
-                "shopID = :shopID, " .
+                "storeID = :storeID, " .
                 "address = :address, " .
                 "manFName = :manFName, " .
                 "manLName = :manLName, " .
                 "phoneNo = :phoneNo " .
-                "WHERE shopID = :shopID";
+                "WHERE storeID = :storeID";
 
         $statement = $this->connection->prepare($sqlQuery);
         $params = array(
-            "shopID" => $sid,
+            "storeID" => $sid,
             "address" => $a,
             "manFName" => $mfn,
             "manLName" => $mln,

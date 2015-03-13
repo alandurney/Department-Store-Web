@@ -22,5 +22,5 @@ $gateway = new ProductTableGateway($connection);
 
 $gateway->deleteProduct($id);
 
-header("Location: home.php");
+header("Location: viewProducts.php");
 ?>

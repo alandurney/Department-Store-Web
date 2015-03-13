@@ -18,7 +18,7 @@ $statement = $gateway->getShops();
     <head>
         <meta charset="UTF-8">
         <script type="text/javascript" src="js/shop.js"></script>
-        <title>Home</title>
+        <title>Shops</title>
     </head>
     <body>
         <!--HOME AND LOGIN/OUT LINKS-->
@@ -33,7 +33,6 @@ $statement = $gateway->getShops();
         <table style="width:100%">
             <thead>
                 <tr>
-                    <th>Shop ID</th>
                     <th>Address</th>
                     <th>Manager's First Name</th>
                     <th>Manager's Last Name</th>
@@ -43,10 +42,10 @@ $statement = $gateway->getShops();
             <tbody>
                 <?php
                 //INFORMATION RETRIEVED AND DISPLAYED HERE//
+                //NOTE: EDITED SO IT DOES NOT DISPLAY ALL INFORMATION ON LOAD// USER SELECTS SHOP WHICH SHOWS ALL INFORMATION
                 $row = $statement->fetch(PDO::FETCH_ASSOC);
                 while ($row) {
                     echo '<tr>';
-                    echo '<td>' . $row['storeID'] . '</td>';
                     echo '<td>' . $row['address'] . '</td>';
                     echo '<td>' . $row['manFName'] . '</td>';
                     echo '<td>' . $row['manLName'] . '</td>';

@@ -33,6 +33,6 @@ $statement = $gateway->getProducts();
         ?>
         <a href="viewProducts.php">Products</a>
         <br>
-        <a href="viewShops.php">Shops</a>
+        <a href="viewShops.php">Stores</a>
     </body>
 </html>

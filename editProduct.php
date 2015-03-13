@@ -15,6 +15,7 @@ $connection = Connection::getInstance();
 $gateway = new ProductTableGateway($connection);
 
 $productID = $_POST['productID'];
+$storeID = $_POST['storeID'];
 
 //SANITIZING PRODUCT NAME AND DESCRIPTION INPUT//
 $prodName = filter_input(INPUT_POST, 'prodName', FILTER_SANITIZE_STRING);
@@ -22,9 +23,10 @@ $description = filter_input(INPUT_POST, 'description', FILTER_SANITIZE_STRING);
 $price = filter_input(INPUT_POST, 'price', FILTER_SANITIZE_NUMBER_FLOAT, FILTER_FLAG_ALLOW_FRACTION );
 $salePrice = filter_input(INPUT_POST, 'salePrice', FILTER_SANITIZE_NUMBER_FLOAT, FILTER_FLAG_ALLOW_FRACTION );
 
+
 $gateway->updateProduct($productID, $prodName, $description, $price, $salePrice);
 
-header('Location: home.php');
+header('Location: viewProducts.php');
 
 
 

@@ -31,8 +31,6 @@ $statement = $gateway->getProducts();
         ?>
         <table style="width:100%">
             <thead>
-                <tr>
-                    <th>Product ID</th>
                     <th>Product Name</th>
                     <th>Description</th>
                     <th>Price</th>
@@ -45,7 +43,6 @@ $statement = $gateway->getProducts();
                 $row = $statement->fetch(PDO::FETCH_ASSOC);
                 while ($row) {
                     echo '<tr>';
-                    echo '<td>' . $row['productID'] . '</td>';
                     echo '<td>' . $row['prodName'] . '</td>';
                     echo '<td>' . $row['description'] . '</td>';
                     echo '<td>' . $row['price'] . '</td>';

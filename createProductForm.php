@@ -56,6 +56,13 @@ require 'ensureUserLoggedIn.php';
                             <span id="salePriceError" class="error"></span>
                         </td>
                     </tr>
+                     <tr>
+                        <td>Store ID:</td>
+                        <td>
+                            <input type="text" name="storeID" value="" />
+                            <span id="storeIDError" class="error"></span>
+                        </td>
+                    </tr>
                     <tr>
                         <td></td>
                         <td>

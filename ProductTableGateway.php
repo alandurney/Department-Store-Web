@@ -46,17 +46,18 @@ class ProductTableGateway {
     
     //SQL QUERY RETRIEVES ALL INFORMATION STORED ON DATABASE AS "INSERT INTO PRODUCTS" OPTION
     //IF STATEMENT SHOWS IF INFORMATION CANNOT BE RETRIEVED
-   public function insertProduct($pn, $d, $p, $sp) {
+   public function insertProduct($pn, $d, $p, $sp, $sid) {
         $sqlQuery = "INSERT INTO product " .
-                "(prodName, description, price, salePrice) " .
-                "VALUES (:prodName, :description, :price, :salePrice)";
+                "(prodName, description, price, salePrice, storeID) " .
+                "VALUES (:prodName, :description, :price, :salePrice, :storeID)";
         
         $statement = $this->connection->prepare($sqlQuery);
         $params = array(
             "prodName" => $pn,
             "description" => $d,
             "price" => $p,
-            "salePrice" => $sp
+            "salePrice" => $sp,
+            "storeID" => $sid
         );
         
         $status = $statement->execute($params);
@@ -89,14 +90,15 @@ class ProductTableGateway {
     }
 
     //UPDATE/EDIT PRODUCT////////////////////////////////////////    
-    public function updateProduct($pid, $pn, $d, $p, $sp) {
+    public function updateProduct($pid, $pn, $d, $p, $sp, $sid) {
         $sqlQuery =
                 "UPDATE product SET " .
                 "productID = :productID, " .
                 "prodName = :prodName, " .
                 "description = :description, " .
                 "price = :price, " .
-                "salePrice = :salePrice " .
+                "salePrice = :salePrice, " .
+                "storeID = :storeID " .
                 "WHERE productID = :productID";
 
         $statement = $this->connection->prepare($sqlQuery);
@@ -106,6 +108,7 @@ class ProductTableGateway {
             "description" => $d,
             "price" => $p,
             "salePrice" => $sp,
+            "storeID" => $sid,
         );
         
         echo '<pre>';

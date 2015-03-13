@@ -17,12 +17,13 @@ $prodName = $_POST['prodName'];
 $description = $_POST['description'];
 $price = $_POST['price'];
 $salePrice= $_POST['salePrice'];
+$storeID = $_POST['storeID'];
 
-$id = $gateway->insertProduct($prodName, $description, $price, $salePrice);
+$id = $gateway->insertProduct($prodName, $description, $price, $salePrice, $storeID);
 
 $message = "Product created successfully";
 
-header('Location: home.php');
+header('Location: viewProducts.php');
 
 
 

@@ -39,7 +39,7 @@ $statement = $gateway->getShopById($id);
                 $row = $statement->fetch(PDO::FETCH_ASSOC);
                     echo '<tr>';
                     echo '<td><b>Shop ID: </b></td>'
-                    . '<td>' . $row['shopID'] . '</td>';
+                    . '<td>' . $row['storeID'] . '</td>';
                     echo '</tr>';
                     echo '<tr>';
                     echo '<td><b>Address: </b></td>'
@@ -61,9 +61,9 @@ $statement = $gateway->getShopById($id);
             </tbody>
         </table>
         <p>
-            <a href="editShopForm.php?id=<?php echo $row['shopID']; ?>">
+            <a href="editShopForm.php?id=<?php echo $row['storeID']; ?>">
                 Edit</a>
-            <a href="deleteShop.php?id=<?php echo $row['shopID']; ?>">
+            <a href="deleteShop.php?id=<?php echo $row['storeID']; ?>">
                 Delete</a>
         </p>
     </body>

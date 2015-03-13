@@ -10,7 +10,7 @@ require 'ensureUserLoggedIn.php';
 <html>
     <head>
         <meta charset="UTF-8">
-        <title></title>
+        <title>Create New Shop</title>
         <script type="text/javascript" src="js/shop.js"></script>
     </head>
     <body>
