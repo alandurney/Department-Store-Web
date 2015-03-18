@@ -5,6 +5,14 @@ if ($id == "") {
 }
 
 require 'ensureUserLoggedIn.php';
+require_once 'ShopTableGateway.php';
+require_once 'Connection.php';
+
+$conn = Connection::getInstance();
+$shopGateway = new ShopTableGateway($conn);
+
+$shops = $shopGateway->getShops();
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -59,8 +67,18 @@ require 'ensureUserLoggedIn.php';
                      <tr>
                         <td>Store ID:</td>
                         <td>
-                            <input type="text" name="storeID" value="" />
-                            <span id="storeIDError" class="error"></span>
+                            <select name="StoreID">
+                                <option value="-1">No Store</option>
+                                <?php
+                                $s = $shops->fetch(PDO::FETCH_ASSOC);
+                                //LOOP TO RETRIEVE ALL STORE IDS. LOOP REPEATS OVER UNTIL THERE IS NOTHING TO RETURN THE VALUE RETURNS FALSE AND IT ENDS//
+                                while ($s) {
+                                    echo '<option value="' . $s['id'] .'">'. $s['storeID'].'</option>';
+                                    $s = $shops->fetch(PDO::FETCH_ASSOC);
+                                }
+                                ?>
+                            </select>
+                            
                         </td>
                     </tr>
                     <tr>

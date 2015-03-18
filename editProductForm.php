@@ -3,6 +3,7 @@
 require_once 'Product.php';
 require_once 'Connection.php';
 require_once 'ProductTableGateway.php';
+require_once 'ShopTableGateway.php';
 
 $id = session_id();
 if ($id == "") {
@@ -18,13 +19,20 @@ $id = $_GET['id'];
 
 $connection = Connection::getInstance();
 $gateway = new ProductTableGateway($connection);
+$shopGateway = new ShopTableGateway($connection);
 
-$statement = $gateway->getProductById($id);
-if ($statement->rowCount() !== 1) {
+
+//$statement = $gateway->getProductById($id);
+$products = $gateway->getProductById($id);
+if ($products->rowCount() !== 1) {
     die("Illegal request");
 }
-$row = $statement->fetch(PDO::FETCH_ASSOC);
+//$row = $statement->fetch(PDO::FETCH_ASSOC);
+$product = $products->fetch(PDO::FETCH_ASSOC);
+
+$shops = $ShopGateway->getShops();
 ?>
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -117,22 +125,21 @@ $row = $statement->fetch(PDO::FETCH_ASSOC);
                             </span>
                         </td>
                     </tr>
-                    <tr>
-                        <td>Store ID</td>
+                   <tr>
+                        <td>Store ID:</td>
                         <td>
-                            <input type="text" name="storeID" value="<?php
-                                if (isset($_POST) && isset($_POST['storeID'])) {
-                                    echo $_POST['storeID'];
-                                }
-                                else echo $row['storeID'];
-                            ?>" />
-                            <span id="storeIDError" class="error">
+                            <select name="StoreID">
+                                <option value="-1">No Store</option>
                                 <?php
-                                if (isset($errorMessage) && isset($errorMessage['storeID'])) {
-                                    echo $errorMessage['storeID'];
+                                $s = $shops->fetch(PDO::FETCH_ASSOC);
+                                //LOOP TO RETRIEVE ALL STORE IDS. LOOP REPEATS OVER UNTIL THERE IS NOTHING TO RETURN THE VALUE RETURNS FALSE AND IT ENDS//
+                                while ($s) {
+                                    echo '<option value="' . $s['id'] .'">'. $s['storeID'].'</option>';
+                                    $s = $shops->fetch(PDO::FETCH_ASSOC);
                                 }
                                 ?>
-                            </span>
+                            </select>
+                            
                         </td>
                     </tr>
                     <tr>
