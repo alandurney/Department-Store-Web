@@ -1,0 +1,487 @@
+
+/*NOTE THIS IS FOR THE JOVER IMAGE PIECE IN SALE SECTION*/
+*, *:after, *:before { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+body, html { font-size: 100%; padding: 0; margin: 0;}
+
+/* Clearfix hack by Nicolas Gallagher: http://nicolasgallagher.com/micro-clearfix-hack/ */
+.clearfix:before, .clearfix:after { content: " "; display: table; }
+.clearfix:after { clear: both; }
+
+
+
+
+
+/*NOTE: MAKE SURE THERE ARE NO SEMI-COLONS THAT COME IN AUTOMATICALLY WHEN MAKING A COMMENT IT WILL MESS UP YOUR CSS!*/
+body {
+    padding-top: 90px;
+    /*padding top affects where the jumbotron starts not the navbar*/
+    width: 100%;
+    height: 100%;
+}
+
+html {
+    width: 100%;
+    height: 100%;
+}
+
+@media(min-width:767px) {
+.navbar > li > a{
+color:#ffffff;
+}
+   
+   .navbar 
+    {
+        padding: 20px 0;
+		
+        background-color: #00bc9c;
+        -webkit-transition: background .5s ease-in-out,padding .5s ease-in-out;
+        -moz-transition: background .5s ease-in-out,padding .5s ease-in-out;
+        transition: background .5s ease-in-out,padding .5s ease-in-out;
+    }
+
+    .top-nav-collapse 
+	{
+        padding: 0;
+    }
+
+/*FIND OUT HOW TO REFER TO TEXT COLOUR FOR THE HEADER. MORE SPECIFICALLY WHAT CLASS NAME IT IS UNDER/ MAKE?*/
+
+.jumbotron{
+	background-color: #fff;
+}
+
+
+/*NOTE: SET FADE OUT OVERWRITE FOR SLIDE ON CAROUSEL*/ 
+.carousel .carousel-inner .item {
+  opacity: 0;
+  -webkit-transition-property: opacity;
+  -moz-transition-property: opacity;
+  -o-transition-property: opacity;
+  transition-property: opacity;
+}
+.carousel .carousel-inner .active {
+  opacity: 1;
+}
+.carousel .carousel-inner .active.left,
+.carousel .carousel-inner .active.right {
+  left: 0;
+  opacity: 0;
+  z-index: 1;
+}
+.carousel .carousel-inner .next.left,
+.carousel .carousel-inner .prev.right {
+  opacity: 12;
+}
+.carousel .carousel-control {
+  z-index: 2;
+}
+
+
+/*NOTE: SETTING THE INDICATOR CIRCLES ON THE SLIDESHOW*/
+.carousel-indicators li {
+  background-color: #00bc9c;
+  border-color: #00bc9c;
+}
+
+.carousel-indicators .active {
+  background-color: #16a085;
+  border-color: #16a085;
+}
+
+.imageRow{
+	img-size: 80px 60px;
+}
+
+/*INFO PANEL ON LEFT OF JUMBOTRON*/
+.info{
+/*background-color: #990033;*/
+padding-bottom: 290px;
+}
+
+.info h1{
+    text-align: left;
+    color: #222222;
+    padding-top: 40px;
+    margin: 0;
+    padding-bottom: 15px;
+}
+.info p{
+    text-align: left;
+    color: #222222;
+    margin: 0;
+    padding-bottom: 30px;
+}
+
+/*NOTE COLOR OF SALE BUTTON*/
+.btn-sale{
+  background-color: #fffdff;
+  border-color: #bdc3c7;
+}
+
+.btn-sale:hover,
+.btn-sale:focus,
+.btn-sale:active,
+.btn-sale:active {
+    border-color: #bdc3c7;
+    background-color: #00bc9c;
+}
+
+
+/*NOTE: CSS FOR SALE AND CONTACT SECTION HERE*/
+/*CSS FOR THE SALE HEAD INTRO PART*/
+.sale-section {
+    height: 200px;
+    padding-top: 30px;
+    padding-bottom: 15px;
+    text-align: left;
+    color: #fffdff;
+    background: #222222;
+    border-top: 1px solid #ecf0f1;
+    border-bottom: 1px solid #ecf0f1;
+}
+
+/*CSS FOR THE RECCOMEND PART*/
+.recommend-section {
+    height: 100%;
+    padding-top: 30px;
+    padding-bottom: 15px;
+    text-align: left;
+    background: #222222;
+	color: #fffdff;
+    border-top: 1px solid #ecf0f1;
+}
+
+/*CSS FOR THE CONTACT PART*/
+.contact-section {
+    height: 100%;
+    padding-top: 150px;
+    text-align: center;
+    background-color: #ecf0f1;
+    border-top: 1px solid #ecf0f1;
+}
+
+/* NOTE GLYPH ICONS ARE SET TO COLOUR OF TEXT. THESE CAN BE CHANGED IN CSS*/
+.glyphicon{
+	color: #00bc9c;
+}
+/*note changing individual icons*/
+.glyphicon-gift
+{
+	color: #fff;
+}
+
+/*NOTE: USING A SPACE BETWEEN TWO ELEMENTS REFER TO DIFFERENT THINGS.
+".pull-right.img-responsive" WITH NO SPACE REFERS TO ONLY AN ELEMENT WITH
+.pull-right.img-responsive, WHEREAS WITH A SPACE WILL REFER TO ANYTHING
+WITH EVEN ONE OF THOSE CLASS ATTRIBUTES */
+.pull-right.img-responsive
+{
+	margin: 0 0 1em 1em;
+	/*changin surrounding area between text and image*/
+	/*REMEMBER "TRBL" =TOP, RIGHT, BOTTOM, LEFT WHEN REFERING TO SPACES AROUND IMAGE*/
+}
+
+/*NOTE HOW TO CHANGE BUTTON ATTRIBUTES.
+NOTE: REFER TO BUTTON CLASS IN THIS CASE IT IS "BTN-MORE" BUT IT HAS TO CHANGE DEPENDING ON WHAT 
+BUTTON TYPE WAS GIVEN*/
+/*NOTE COLOR OF SALE BUTTON*/
+.btn-more{
+	background-color: #00bc9c;
+	color: #fff;
+}
+
+.btn-more:hover,
+.btn-more:focus,
+.btn-more:active,
+.btn-more:active,
+.open .dropdown-toggle.btn-sign {
+    color:#ffffff;
+    background-color: #16a085;
+    border-color: #16a085;
+}
+
+
+/*CHANGING COLOR OF SIGNIN/LOGIN BUTTONS*/
+.sign{
+  padding-top: 7px;
+}
+
+.btn-sign{
+    background-color: #fff;
+    color: #222222;  
+}
+
+.btn-sign:hover,
+.btn-sign:focus,
+.btn-sign:active,
+.btn-sign:active,
+.open .dropdown-toggle.btn-sign {
+	color:#ffffff;
+	background-color: #16a085;
+	border-color: #16a085;
+}
+
+footer{
+  padding: 20px;
+  text-align: center;
+  background-color: #222222;
+}
+
+/*NOTE: CSS FOR THE CONTACT SECTION OF THE FOOTER*/ 
+.footer-contact {
+  padding: 20px 20px 50px 20px;
+  max-width: 1300px;
+  margin: 0 auto;
+  list-style: none;
+  text-align: center;
+}
+
+.footer-contact li {
+  display: inline-block;
+  width: 440px;
+  margin: 0;
+  text-align: left;
+  position: relative;
+}
+/*NOTE: TEXT STYLING FOR THE FOOTER CONTACT SECTION*/
+.footer-contact h4{
+color: #00bc9c;
+}
+.footer-contact p{
+color: #fffdff;
+}
+
+/*NOTE THIS IS THE STYLING FOR THE MENU AT THE FOOTER*/
+.footer-menu li {
+  display: inline-block;
+  width: 440px;
+  margin: 0;
+  text-align: left;
+  position: relative;
+}
+/*NOTE: TEXT STYLING FOR THE FOOTER menu SECTION*/
+.footer-menu h4{
+color: #00bc9c;
+}
+.footer-menu p{
+color: #fffdff;
+}
+
+/*NOTE THIS IS THE STYLING FOR THE signupto newsletter AT THE FOOTER*/
+.footer-news li {
+  display: inline-block;
+  width: 440px;
+  margin: 0;
+  text-align: left;
+  position: relative;
+}
+/*NOTE: TEXT STYLING FOR THE FOOTER signup to newsletter SECTION*/
+.footer-news h4{
+color: #00bc9c;
+}
+.footer-news p{
+color: #fffdff;
+}
+
+
+
+
+/*IMAGE HOVER EFFECT*/
+
+/* Caption Style 4 */
+.cs-style-4 li {
+  -webkit-perspective: 1700px;
+  -moz-perspective: 1700px;
+  perspective: 1700px;
+  -webkit-perspective-origin: 0 50%;
+  -moz-perspective-origin: 0 50%;
+  perspective-origin: 0 50%;
+}
+
+.cs-style-4 figure {
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+
+.cs-style-4 figure > div {
+  overflow: hidden;
+}
+
+.cs-style-4 figure img {
+  -webkit-transition: -webkit-transform 0.4s;
+  -moz-transition: -moz-transform 0.4s;
+  transition: transform 0.4s;
+}
+
+/*NOTE THIS EFFECTS HOW FAR OUT THE IMAGE SLIDES*/
+.no-touch .cs-style-4 figure:hover img,
+.cs-style-4 figure.cs-hover img {
+  -webkit-transform: translateX(25%);
+  -moz-transform: translateX(25%);
+  -ms-transform: translateX(25%);
+  transform: translateX(25%);
+}
+
+/*EFFECTS HOW INFO PANEL LOOKS*/ 
+.cs-style-4 figcaption {
+  height: 100%;
+  width:40%;
+  opacity: 0;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transform-origin: 0 0;
+  -moz-transform-origin: 0 0;
+  transform-origin: 0 0;
+  -webkit-transform: rotateY(-90deg);
+  -moz-transform: rotateY(-90deg);
+  transform: rotateY(-90deg);
+  -webkit-transition: -webkit-transform 0.4s, opacity 0.1s 0.3s;
+  -moz-transition: -moz-transform 0.4s, opacity 0.1s 0.3s;
+  transition: transform 0.4s, opacity 0.1s 0.3s;
+}
+
+.no-touch .cs-style-4 figure:hover figcaption,
+.cs-style-4 figure.cs-hover figcaption {
+  opacity: 1;
+  -webkit-transform: rotateY(0deg);
+  -moz-transform: rotateY(0deg);
+  transform: rotateY(0deg);
+  -webkit-transition: -webkit-transform 0.4s, opacity 0.1s;
+  -moz-transition: -moz-transform 0.4s, opacity 0.1s;
+  transition: transform 0.4s, opacity 0.1s;
+}
+
+/*EFFECTS POSITION OF SEE MORE BUTTON*/
+.cs-style-4 figcaption a {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+}
+
+.grid {
+  padding: 20px 20px 100px 20px;
+  max-width: 1300px;
+  margin: 0 auto;
+  list-style: none;
+  text-align: center;
+}
+
+.grid li {
+  display: inline-block;
+  width: 440px;
+  margin: 0;
+  padding: 20px;
+  text-align: left;
+  position: relative;
+}
+
+.grid figure {
+  margin: 0;
+  position: relative;
+}
+
+.grid figure img {
+  max-width: 100%;
+  max-height: 80%;
+  display: block;
+  position: relative;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+/*position of text in panel*/
+.grid figcaption {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 20px;
+  background: #ecf0f1;
+}
+
+
+/*NOTE: THIS IS HOW YOU STYLE TEXT SPACING*/
+/*NOTE: THIS IS for the top two sale pieces*/
+.grid figcaption h3 {
+  margin: 0;
+  color: #222222;
+  padding-bottom: 25px;
+}
+
+.grid figcaption p {
+  margin: 0;
+  color: #00bc9c;
+}
+
+/*THIS IS FOR THE 3x4 COL*/
+.grid figcaption h4 {
+  margin: 0;
+  color: #222222;
+  padding-bottom: 25px;
+}
+
+.grid figcaption p {
+  margin: 0;
+  color: #00bc9c;
+}
+
+.grid figcaption span:before {
+  content: 'by ';
+}
+
+.grid figcaption a {
+  text-align: center;
+  padding: 5px 10px;
+  border-radius: 2px;
+  display: inline-block;
+  background: #fffdff;
+  color: #222222;
+}
+
+/**************************END INDEX PAGE CSS*****************************/
+
+
+/*CSS FOR THE LEVEL 2*/
+/*CSS FOR DASHBOARD*/
+.dashboard {
+    height: 900px;
+    padding-top: 125px;
+	list-style: none;
+    background-color: #ecf0f1;
+    border-top: 1px solid #ecf0f1;
+}
+
+.dashboard li {
+  display: block;
+  padding-bottom: 30px;
+}
+
+/*NOTE COLOR/SIZING OF PRODUCT BUTTON*/
+.btn-prod{
+  background-color: #00bc9c;
+  color: #fffdff;
+  width: 100%;
+  text-align: left;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.btn-prod:hover,
+.btn-prod:focus,
+.btn-prod:active,
+.btn-prod:active {
+    color:#fffdff;
+    background-color: #16a085;
+    border-color: #16a085;
+}
+
+/* NOTE: GLYPHICONS FOR USER INPUT OPTIONS. SHOPS AND PRODUCTS*/
+/*NOTE: HOW TO SIZE GLYPHICONS*/
+.glyphicon-certificate,
+.glyphicon-tags
+{
+	font-size: 35px;
+	color: #fffdff;
+}
