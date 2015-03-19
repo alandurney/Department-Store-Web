@@ -46,18 +46,18 @@ $row = $statement->fetch(PDO::FETCH_ASSOC);
             <table border="0">
                 <tbody>
                     <tr>
-                        <td>Address</td>
+                        <td>Store Name</td>
                         <td>
-                            <input type="text" name="address" value="<?php
-                                if (isset($_POST) && isset($_POST['address'])) {
-                                    echo $_POST['address'];
+                            <input type="text" name="shopName" value="<?php
+                                if (isset($_POST) && isset($_POST['shopName'])) {
+                                    echo $_POST['shopName'];
                                 }
-                                else echo $row['address'];
+                                else echo $row['shopName'];
                             ?>" />
-                            <span id="addressError" class="error">
+                            <span id="shopNameError" class="error">
                                 <?php
-                                if (isset($errorMessage) && isset($errorMessage['address'])) {
-                                    echo $errorMessage['address'];
+                                if (isset($errorMessage) && isset($errorMessage['shopName'])) {
+                                    echo $errorMessage['shopName'];
                                 }
                                 ?>
                             </span>

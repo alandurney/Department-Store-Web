@@ -42,8 +42,8 @@ $statement = $gateway->getShopById($id);
                     . '<td>' . $row['storeID'] . '</td>';
                     echo '</tr>';
                     echo '<tr>';
-                    echo '<td><b>Address: </b></td>'
-                    . '<td>' . $row['address'] . '</td>';
+                    echo '<td><b>Store Name: </b></td>'
+                    . '<td>' . $row['shopName'] . '</td>';
                     echo '</tr>';
                     echo '<tr>';
                     echo '<td><b>Managers First Name:  </b></td>'

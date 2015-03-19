@@ -16,12 +16,12 @@ $gateway = new ShopTableGateway($connection);
 $shopID = $_POST['shopID'];
 
 //SANITIZING PRODUCT NAME AND DESCRIPTION INPUT//
-$address = filter_input(INPUT_POST, 'address', FILTER_SANITIZE_STRING);
+$shopName = filter_input(INPUT_POST, 'shopName', FILTER_SANITIZE_STRING);
 $manFName = filter_input(INPUT_POST, 'manFName', FILTER_SANITIZE_STRING);
 $manLName = filter_input(INPUT_POST, 'manLName', FILTER_SANITIZE_STRING);
 $phoneNo = filter_input(INPUT_POST, 'phoneNo', FILTER_SANITIZE_STRING);
 
-$gateway->updateShop($shopID, $address, $manFName, $manLName, $phoneNo);
+$gateway->updateShop($shopID, $shopName, $manFName, $manLName, $phoneNo);
 
 header('Location: viewShops.php');
 

@@ -57,15 +57,15 @@ $statement = $gateway->getProducts();
                         <li class="hidden">
                             <a class="page-scroll" href="#page-top"></a><!--click icon goes to page top-->
                         </li>
-                      
 
-                        
+
+
                     </ul>
 
                     <!--NOTE: THE SIGNIN/LOGIN BUTTONS WOULD DISSAPEAR WHEN YOU HAVE LOGGED IN. THIS WOULD HAVE TO FIGURED OUT WITH THE PHP-->
 
                     <div class="sign col-lg-1 col-lg-push-8">
-                        <a class="btn btn-sign" href="#" role="button">Sign Out</a>
+                        <a class="btn btn-sign" href="index.php" role="button">Sign Out</a>
                     </div>
 
                 </div><!-- /.navbar-collapse -->

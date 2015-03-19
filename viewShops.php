@@ -33,7 +33,7 @@ $statement = $gateway->getShops();
         <table style="width:100%">
             <thead>
                 <tr>
-                    <th>Address</th>
+                    <th>Store Name</th>
                     <th>Manager's First Name</th>
                     <th>Manager's Last Name</th>
                     <th>Phone No.</th>
@@ -46,7 +46,7 @@ $statement = $gateway->getShops();
                 $row = $statement->fetch(PDO::FETCH_ASSOC);
                 while ($row) {
                     echo '<tr>';
-                    echo '<td>' . $row['address'] . '</td>';
+                    echo '<td>' . $row['shopName'] . '</td>';
                     echo '<td>' . $row['manFName'] . '</td>';
                     echo '<td>' . $row['manLName'] . '</td>';
                     echo '<td>' . $row['phoneNo'] . '</td>';

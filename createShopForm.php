@@ -29,10 +29,10 @@ require 'ensureUserLoggedIn.php';
                         <th>Create New Shop</th>
                     </tr>
                     <tr>
-                        <td>Address:</td>
+                        <td>Store Name:</td>
                         <td>
-                            <input type="text" name="address" value="" />
-                            <span id="addressError" class="error"></span>
+                            <input type="text" name="shopName" value="" />
+                            <span id="shopNameError" class="error"></span>
                         </td>
                     </tr>
                     <tr>

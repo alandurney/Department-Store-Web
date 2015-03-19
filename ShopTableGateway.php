@@ -39,19 +39,20 @@ class ShopTableGateway {
         return $statement;
     }
     
-   public function insertShop($a, $mfn, $mln, $pn) {
+   public function insertShop($sn, $mfn, $mln, $pn) {
         $sqlQuery = "INSERT INTO shop " .
-                "(address, manFName, manLName, phoneNo) " .
-                "VALUES (:address, :manFName, :manLName, :phoneNo)";
+                "(shopName, manFName, manLName, phoneNo) " .
+                "VALUES (:shopName, :manFName, :manLName, :phoneNo)";
         
         $statement = $this->connection->prepare($sqlQuery);
         $params = array(
-            "address" => $a,
+            "shopName" => $sn,
             "manFName" => $mfn,
             "manLName" => $mln,
             "phoneNo" => $pn
         );
         
+        //NOTE: THE COMMENTED CODE IS JUST TO DISPLAY THE ARRAY. THIS ISNT NEEDED
         echo '<pre>';
         print_r($_POST);
         print_r($params);
@@ -87,11 +88,11 @@ class ShopTableGateway {
         return ($statement->rowCount() == 1);
     }
     
-    public function updateShop($sid, $a, $mfn, $mln, $pn) {
+    public function updateShop($sid, $sn, $mfn, $mln, $pn) {
         $sqlQuery =
                 "UPDATE shop SET " .
                 "storeID = :storeID, " .
-                "address = :address, " .
+                "shopName = :shopName, " .
                 "manFName = :manFName, " .
                 "manLName = :manLName, " .
                 "phoneNo = :phoneNo " .
@@ -100,7 +101,7 @@ class ShopTableGateway {
         $statement = $this->connection->prepare($sqlQuery);
         $params = array(
             "storeID" => $sid,
-            "address" => $a,
+            "shopName" => $sn,
             "manFName" => $mfn,
             "manLName" => $mln,
             "phoneNo" => $pn,
