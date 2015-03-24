@@ -20,6 +20,7 @@ $description = filter_input(INPUT_POST, 'description', FILTER_SANITIZE_FULL_SPEC
 $price = filter_input(INPUT_POST, 'price', FILTER_SANITIZE_NUMBER_FLOAT, FILTER_FLAG_ALLOW_FRACTION );
 $salePrice = filter_input(INPUT_POST, 'salePrice', FILTER_SANITIZE_NUMBER_FLOAT, FILTER_FLAG_ALLOW_FRACTION );
 $storeID = filter_input(INPUT_POST, 'storeID', FILTER_SANITIZE_NUMBER_INT);
+//this will store anything that is empty to become null in the database//
 if ($storeID == -1){
     $storeID = NULL;
 }

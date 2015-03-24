@@ -37,7 +37,7 @@ if ($password === FALSE || $password === '') {
 }
 
 if ($password2 === FALSE || $password2 === '') {
-    $errorMessage['password2'] = 'Password2 must not be blank<br/>';
+    $errorMessage['password2'] = 'Confirm Password must not be blank<br/>';
 }
 else if ($password !== $password2) {
     $errorMessage['password2'] = 'Passwords must match<br/>';

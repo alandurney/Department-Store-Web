@@ -46,7 +46,7 @@ $statement = $gateway->getProducts();
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <!--page name NOTE: DONT SET THIS INTO ITS OWN COL WHERE IT IS ALREDAY MEANS YOU WON'T NEED IT-->
+                    <!--page name NOTE: DONT SET THIS INTO ITS OWN COL WHERE IT IS ALREADY MEANS YOU WON'T NEED IT-->
                     <a class="navbar-brand page-scroll" href="index.php"><span class="glyphicon glyphicon-gift"></span> TheNewYou</a>
                 </div>
 
@@ -64,7 +64,7 @@ $statement = $gateway->getProducts();
 
                     <!--NOTE: THE SIGNIN/LOGIN BUTTONS WOULD DISSAPEAR WHEN YOU HAVE LOGGED IN. THIS WOULD HAVE TO FIGURED OUT WITH THE PHP-->
 
-                    <div class="sign col-lg-1 col-lg-push-8">
+                    <div class="sign col-lg-1 col-lg-push-10">
                         <a class="btn btn-sign" href="index.php" role="button">Sign Out</a>
                     </div>
 
@@ -77,10 +77,22 @@ $statement = $gateway->getProducts();
     </nav><!--end nav class-->
 
     <!----------------------------------END SCROLL HEAD-------------------------------------->
+    <!-- DASHBOArd -->
+    <div class="dashboarddesc">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1>TheNewYou Database:</h1>
+                    <h3>Use the options below to access the database tables.</h3>
+                    <h3>You can also use these to create, edit or delete existing Products or Stores</h3>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
     <!-- DASHBOArd -->
-    <section id="dashboard" class="dashboard">
+    <div class="dashboard">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
@@ -91,42 +103,27 @@ $statement = $gateway->getProducts();
                 </div>
             </div>
         </div>
-    </section>
-
-
+    </div>
 
     <footer id="contact" class="row">
         <!--NOTE: DOES USING SMALL TAGS COUNT ASS CSS IN HTML?-->
-        <div class="col-lg-4">
+        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
             <ul class="footer-contact">
                 <li><p><span class="glyphicon glyphicon-info-sign"></span> Contact Us</p></li>
                 <li><h4>TheNewYou</h4></li>
                 <li><p><span class="glyphicon glyphicon-earphone"></span> Call Us: 01 23477545</p></li>
                 <li><p><span class="glyphicon glyphicon-globe"></span> Email Us: thenewyou@gmail.com</p></li>
+                
             </ul>
         </div>
 
-        <div class="col-lg-4">
-            <ul class="footer-menu">
-                <li><h4>Back to the top</h4></li>
-                <li><p>Men</p></li>
-                <li><p>Women</p></li>
-                <li><p>Sale</p></li>
-            </ul>
+
+        <!--NOTE THIS IS THE BOTTOM OF THE PAGE. HAS CARD INFORMATION TRADEMARKS ETC.-->
+        <div class="pages-end col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <div class="col-lg-4 col-push-left">
+                <p>Copyright © TheNewYou Retail plc 2015. All rights reserved. Legal Disclaimer.</p>
+            </div>            
         </div>
-
-        <div class="col-lg-4">
-            <ul class="footer-news">
-                <li><h4>Sign Up for our Newsletter</h4></li>
-                <li><p>For news about the store, discounts, competitions, promotions and more, sign up today.</p></li>
-
-                <li><div class="input-group">
-                        <span class="input-group-addon" id="basic-addon1">Email</span>
-                        <input type="text" class="form-control" aria-describedby="basic-addon1">
-                    </div></li>
-            </ul>
-        </div>
-
     </footer>
 
 

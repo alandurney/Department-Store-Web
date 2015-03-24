@@ -12,7 +12,12 @@ class ProductTableGateway {
     //IF STATEMENT SHOWS IF INFORMATION CANNOT BE RETRIEVED
     public function getProducts() {
         //query to get all products
-        $sqlQuery = "SELECT * FROM product";
+        //$sqlQuery = "SELECT * FROM product";
+        $sqlQuery = 
+                "SELECT p.*, s.shopName
+                 FROM products p
+                 LEFT JOIN shops s ON s.id = p.storeID
+                 WHERE p.id = :id";
         
         $statement = $this->connection->prepare($sqlQuery);
         $status = $statement->execute();
@@ -27,10 +32,14 @@ class ProductTableGateway {
     //RETIREVES PRODUCT ROW BY SPECIFIC ID
     public function getProductById($id) {
         //query to get all products
-        $sqlQuery = "SELECT * FROM product WHERE productID = :productID";
+        //$sqlQuery = "SELECT * FROM product WHERE productID = :productID";
+        $sqlQuery = 
+                "SELECT p.*, s.shopName
+                 FROM products p
+                 LEFT JOIN shops s ON s.id = p.storeID
+                 WHERE p.id = :id";
         
         $statement = $this->connection->prepare($sqlQuery);
-        
         $params = array(
             "productID" => $id
         );

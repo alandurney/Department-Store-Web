@@ -143,6 +143,28 @@ $shops = $ShopGateway->getShops();
                         </td>
                     </tr>
                     <tr>
+                        <td>Store ID:</td>
+                        <td>
+                            <select name="StoreID">
+                                <option value="-1">No Store</option>
+                                <?php
+                                $s = $shops->fetch(PDO::FETCH_ASSOC);
+                                //LOOP TO RETRIEVE ALL STORE IDS. LOOP REPEATS OVER UNTIL THERE IS NOTHING TO RETURN THE VALUE RETURNS FALSE AND IT ENDS//
+                                while ($s) {
+                                    //making a variable and if else loop to display original store id in the edit table.
+                                    $selected = "";
+                                    if ($m['id'] == $product['storeID']){
+                                        $selected = "selected";
+                                    }
+                                    echo '<option value="' . $s['id'] .'"'. $selected . $s['storeID'].'</option>';
+                                    $s = $shops->fetch(PDO::FETCH_ASSOC);
+                                }
+                                ?>
+                            </select>
+                            
+                        </td>
+                    </tr>
+                    <tr>
                         <td></td>
                         <td>
                             <input type="submit" value="Update Product" name="updateProduct" />

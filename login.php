@@ -44,7 +44,9 @@
                     </ul>
 
                     <!--NOTE: THE SIGNIN/LOGIN BUTTONS WOULD DISSAPEAR WHEN YOU HAVE LOGGED IN. THIS WOULD HAVE TO FIGURED OUT WITH THE PHP-->
-
+                    <div class="sign col-lg-1 col-lg-push-10 col-md-1 col-md-push-8 col-sm-1 col-sm-push-8">
+                        <a class="btn btn-sign" href="register.php" role="button">Sign Up</a>
+                    </div>
 
                 </div><!-- /.navbar-collapse -->
 
@@ -55,151 +57,108 @@
     </nav><!--end nav class-->
 
     <!----------------------------------END SCROLL HEAD-------------------------------------->
-    <div class="container">
-        <div class="row">
+    <div class="jumbotron-login">
+        <div class="login-section">
+            <div class="container">
+                <div class="row">
+                    <div class="login form col-lg-6 col-md-6 col-sm-6">
+                        <form id="loginForm" 
+                              class="form-horizontal" 
+                              action="checkLogin.php" 
+                              method="POST">
+                            
+                            <h1>Welcome Back</h1>
+                            
+                            <div class="form-group">
+                                <div class="col-lg-6 col-md-4 col-sm-4">
+                                    <input type="text" name="username" class="form-control"  placeholder="Username"  value="<?php echo $username; ?>" />
+                                    <span id="usernameError" class="error">
+                                        <?php
+                                        if (isset($errorMessage) && isset($errorMessage['username'])) {
+                                            echo $errorMessage['username'];
+                                        }
+                                        ?>
+                                    </span>
+                                </div>
+                            </div>
 
-            <!--SETS IT TO THE CENTRE AND SETS THE RESPONSIVE ACTION-->
-            <div class="Absolute-Center is-Responsive">
-                <div id="logo"></div>
-                <div class="col-sm-12 col-md-10 col-md-offset-1">
-                    <!---------------------------------------------------------------------->
-                    <form action="checkLogin.php" method="POST">
-                        <div>
-                            <!--<span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>-->
-                            <input type="text" name="username" value="<?php echo $username; ?>" />
-                            <span id="usernameError" class="error">
-                                <?php
-                                if (isset($errorMessage) && isset($errorMessage['username'])) {
-                                    echo $errorMessage['username'];
-                                }
-                                ?>
-                            </span>
-                        </div>
+                            <div class="form-group">
+                                <div class="col-lg-6 col-md-4 col-sm-4">
+                                    <input type="password" name="password" class="form-control"  placeholder="Password" value="" />
+                                    <span id="passwordError" class="error">
+                                        <?php
+                                        if (isset($errorMessage) && isset($errorMessage['password'])) {
+                                            echo $errorMessage['password'];
+                                        }
+                                        ?>
+                                    </span>
+                                </div>
+                            </div>
 
-                        <table border="0">
-                            <tbody>
-                                <tr>
-                                    <td>Password</td>
-                                    <td>
-                                        <input type="password" name="password" value="" />
-                                        <span id="passwordError" class="error">
-                                            <?php
-                                            if (isset($errorMessage) && isset($errorMessage['password'])) {
-                                                echo $errorMessage['password'];
-                                            }
-                                            ?>
-                                        </span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td></td>
-                                    <td>
-                                        <input type="submit" value="Login" name="login" />
-                                        <input type="button"
-                                               value="Register"
-                                               name="register"
-                                               onclick="document.location.href = 'register.php'"
-                                               />
-                                        <input type="button" value="Forgot Password" name="forgot" />
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
+                            <!--ALL BUTTONS GO HERE-->
+                            <div class="form-group">
+                                <div class="col-lg-6 col-md-6 col-md-6">
+                                    <!--SIGNIN BUTTON-->
+                                    <button type="submit" class="btn btn-login" value="Login" name="login">Sign In</button>
 
-                    </form>
-                    <!---------------------------------------------------------------------->
+                                    <!--REGISTER LINK BUTTON-->
+                                    <button class="btn btn-register"
+                                            type="button"
+                                            value="Register" 
+                                            name="register"
+                                            onclick="document.location.href = 'register.php'" 
+                                            >Register</button>
 
+                                    <!--FORGOT PASSWORD BUTTON NOTE: DOES NOT LINK ANYWHERE YET-->
+                                    <button class="btn btn-register" 
+                                            type="button" 
+                                            value="Forgot Password" 
+                                            name="forgot" />Forgot Password?</button>
+                                </div>
+                            </div>
 
-                    <form action="" id="loginForm">
-                        <div class="form-group input-group">
-                            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-                            <input class="form-control" type="text" name='username' placeholder="username" value="<?php echo $username; ?>"/>          
-                        </div>
-
-
-
-
-                        <div>
-                            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-                            <input type="text" name="username" placeholder="username" value="<?php echo $username; ?>" />
-                            <span id="usernameError" class="error">
-                                <?php
-                                if (isset($errorMessage) && isset($errorMessage['username'])) {
-                                    echo $errorMessage['username'];
-                                }
-                                ?>
-                            </span>
-                        </div>
-
-
-
-
-                        <div class="form-group input-group">
-                            <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
-                            <input class="form-control" type="password" name='password' placeholder="password"/>     
-                        </div>
-                        <div class="form-group">
-                            <button type="button" class="btn btn-def btn-block">Login</button>
-                        </div>
-                        <div class="form-group text-center">
-                            <a href="#">Forgot Password</a>&nbsp;|&nbsp;<a href="#">Support</a>
-                        </div>
-                    </form>        
-
-
-
-
-
-
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
+    </div>
+
 
         <footer id="contact" class="row">
-            <!--NOTE: DOES USING SMALL TAGS COUNT ASS CSS IN HTML?-->
-            <div class="col-lg-4">
-                <ul class="footer-contact">
-                    <li><p><span class="glyphicon glyphicon-info-sign"></span> Contact Us</p></li>
-                    <li><h4>TheNewYou</h4></li>
-                    <li><p><span class="glyphicon glyphicon-earphone"></span> Call Us: 01 23477545</p></li>
-                    <li><p><span class="glyphicon glyphicon-globe"></span> Email Us: thenewyou@gmail.com</p></li>
-                </ul>
-            </div>
+        <!--NOTE: DOES USING SMALL TAGS COUNT ASS CSS IN HTML?-->
+        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+            <ul class="footer-contact">
+                <li><p><span class="glyphicon glyphicon-info-sign"></span> Contact Us</p></li>
+                <li><h4>TheNewYou</h4></li>
+                <li><p><span class="glyphicon glyphicon-earphone"></span> Call Us: 01 23477545</p></li>
+                <li><p><span class="glyphicon glyphicon-globe"></span> Email Us: thenewyou@gmail.com</p></li>
+                
+            </ul>
+        </div>
 
-            <div class="col-lg-4">
-                <ul class="footer-menu">
-                    <li><h4>Back to the top</h4></li>
-                    <li><p>Men</p></li>
-                    <li><p>Women</p></li>
-                    <li><p>Sale</p></li>
-                </ul>
-            </div>
 
-            <div class="col-lg-4">
-                <ul class="footer-news">
-                    <li><h4>Sign Up for our Newsletter</h4></li>
-                    <li><p>For news about the store, discounts, competitions, promotions and more, sign up today.</p></li>
-
-                    <li><div class="input-group">
-                            <span class="input-group-addon" id="basic-addon1">Email</span>
-                            <input type="text" class="form-control" aria-describedby="basic-addon1">
-                        </div></li>
-                </ul>
-            </div>
-        </footer>
+        <!--NOTE THIS IS THE BOTTOM OF THE PAGE. HAS CARD INFORMATION TRADEMARKS ETC.-->
+        <div class="pages-end col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <div class="col-lg-4 col-push-left">
+                <p>Copyright © TheNewYou Retail plc 2015. All rights reserved. Legal Disclaimer.</p>
+            </div>            
+        </div>
+    </footer>
 
 
 
-        <!-- javascript -->
-        <script src="http://code.jquery.com/jquery-latest.min.js"></script>
-        <script src="js/bootstrap.min.js"></script>
 
-        <!-- Scrolling Nav JavaScript -->
-        <script src="js/jquery.easing.min.js"></script>
-        <script src="js/scrolling-nav.js"></script>
-        <!--NOTE:TOUCHEFFECTS IS FOR THE HOVER IMAGE EFFECT IN SALE-->
-        <script src="js/toucheffects.js"></script>
 
+    <!-- javascript -->
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Scrolling Nav JavaScript -->
+    <script src="js/jquery.easing.min.js"></script>
+    <script src="js/scrolling-nav.js"></script>
+    <!--NOTE:TOUCHEFFECTS IS FOR THE HOVER IMAGE EFFECT IN SALE-->
+    <script src="js/toucheffects.js"></script>
 </body>
 </html>
 
