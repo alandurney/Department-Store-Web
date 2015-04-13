@@ -14,10 +14,9 @@ class ProductTableGateway {
         //query to get all products
         //$sqlQuery = "SELECT * FROM product";
         $sqlQuery = 
-                "SELECT p.*, s.shopName
-                 FROM products p
-                 LEFT JOIN shops s ON s.id = p.storeID
-                 WHERE p.id = :id";
+                "SELECT p.*, s.shopName AS store
+                 FROM product p
+                 LEFT JOIN shop s ON s.storeID = p.storeID";
         
         $statement = $this->connection->prepare($sqlQuery);
         $status = $statement->execute();
@@ -34,10 +33,10 @@ class ProductTableGateway {
         //query to get all products
         //$sqlQuery = "SELECT * FROM product WHERE productID = :productID";
         $sqlQuery = 
-                "SELECT p.*, s.shopName
-                 FROM products p
-                 LEFT JOIN shops s ON s.id = p.storeID
-                 WHERE p.id = :id";
+                "SELECT p.*, s.shopName AS store
+                 FROM product p
+                 LEFT JOIN shop s ON s.storeID = p.storeID
+                 WHERE p.productID = :productID";
         
         $statement = $this->connection->prepare($sqlQuery);
         $params = array(

@@ -22,825 +22,889 @@ html {
 }
 
 @media(min-width:760px) {
-.navbar-header > navbar-nav > dropdown-toggle > ul > li > a{
-color:#fffdff;
-}
-
-.navbar 
-{
-    padding: 20px 0;
-    color: #fffdff;
-    background-color: #00bc9c;
-    -webkit-transition: background .5s ease-in-out,padding .5s ease-in-out;
-    -moz-transition: background .5s ease-in-out,padding .5s ease-in-out;
-    transition: background .5s ease-in-out,padding .5s ease-in-out;
-}
-
-.top-nav-collapse 
-{
-    padding: 0;
-}
-
-/*FIND OUT HOW TO REFER TO TEXT COLOUR FOR THE HEADER. MORE SPECIFICALLY WHAT CLASS NAME IT IS UNDER/ MAKE?*/
-
-
-/*NOTE: SET FADE OUT OVERWRITE FOR SLIDE ON CAROUSEL*/ 
-.carousel .carousel-inner .item {
-  opacity: 0;
-  -webkit-transition-property: opacity;
-  -moz-transition-property: opacity;
-  -o-transition-property: opacity;
-  transition-property: opacity;
-}
-.carousel .carousel-inner .active {
-  opacity: 1;
-}
-.carousel .carousel-inner .active.left,
-.carousel .carousel-inner .active.right {
-  left: 0;
-  opacity: 0;
-  z-index: 1;
-}
-.carousel .carousel-inner .next.left,
-.carousel .carousel-inner .prev.right {
-  opacity: 12;
-}
-.carousel .carousel-control {
-  z-index: 2;
-}
-
-
-/*NOTE: SETTING THE INDICATOR CIRCLES ON THE SLIDESHOW*/
-.carousel-indicators li {
-  background-color: #00bc9c;
-  border-color: #00bc9c;
-}
-
-.carousel-indicators .active {
-  background-color: #16a085;
-  border-color: #16a085;
-}
-
-/*.imageRow{
-	img-size: 80px 60px;
-}*/
-
-/*INFO PANEL ON right OF JUMBOTRON*/
-.info{
-/*background-color: #990033;*/
-padding-bottom: 50px;
-}
-
-.info h1{
-    text-align: center;
-    text-shadow: #999 0 1px 1px;
-    color: #222222;
-    padding-top: 20px;
-    margin: 0;
-    padding-bottom: 10px;
-    letter-spacing: -1px;
-}
-
-/*THIS IS FOR THE NEWYOU TITLE text properties ON THE CAROUSEL AD*/
-.info h2{
-    text-align: center;
-    text-shadow: #999 0 1px 1px;
-    color: #222222;
-    padding-top: 10px;
-    letter-spacing: -3px;
-}
-.info p{
-    text-align: center;
-    text-shadow: #999 0 1px 1px;
-    color: #222222;
-    margin: 0;
-    padding-bottom: 10px;
-}
-
-/*NOTE: THIS IS THE COLORED BAR IN THE SIDE PIECE ON THE CAORUSEL*/
-.salead{
-  margin-top: 20px;
-  width: 100%;
-  height: 80px;
-  background-color: #222222;
-}
-
-.salead h2{
-  color: #fffdff;
-  text-align: center;
-  padding-top: 25px;
-  padding-bottom: 15px;
-}
-
-/*NOTE COLOR OF SALE BUTTON*/
-.btn-sale{
-  background-color: #fffdff;
-  border-color: #bdc3c7;
-}
-
-.btn-sale:hover,
-.btn-sale:focus,
-.btn-sale:active,
-.btn-sale:active {
-    border-color: #bdc3c7;
-    background-color: #00bc9c;
-}
-
-
-/*NOTE: CSS FOR SALE AND CONTACT SECTION HERE*/
-/*CSS FOR THE SALE HEAD INTRO PART*/
-.sale-section {
-    height: 200px;
-    background: #222222;
-    border-top: 1px solid #ecf0f1;
-    border-bottom: 1px solid #ecf0f1;
-}
-
-.sale-section h1{
-    text-align: left;
-    text-shadow: #999 0 1px 1px;
-    color: #fffdff;
-    padding-top: 30px;
-    padding-bottom: 5px;
-    letter-spacing: -3px;
-}
-.sale-section p{
-    text-align: left;
-    text-shadow: #999 0 1px 1px;
-    color: #fffdff;
-    margin: 0;
-    padding-top: 5px;
-    padding-bottom: 15px;
-    letter-spacing: 1px;
-}
-
-
-
-/*position of text in panel*/
-.grid figcaption {
-  position: absolute;
-  top: 0;
-  left: 0;
-  padding: 20px;
-  background: #ecf0f1;
-}
-
-
-/*THIS IS FOR THE NON HOVER AREA PRODUCTS*/
-
-.saleitemrow{
-  padding-top: 50px;
-}
-
-
-.sale-info-box h3 {
-  margin: 0;
-  color: #222222;
-  padding-bottom: 25px;
-}
-
-.sale-info-box p {
-  margin: 0;
-  color: #00bc9c;
-  padding-bottom: 5px;
-}
-
-.sale-info-box a {
-  text-align: center;
-  padding: 5px 10px;
-  border-radius: 2px;
-  display: inline-block;
-  background: #bdc3c7;
-  color: #222222;
-}
-
-/*CSS FOR THE style edit PART*/
-.style-section {
-    height: 600px;
-    padding-top: 30px;
-    padding-bottom: 15px;
-    text-align: left;
-    background-color: #222222;
-    color: #fffdff;
-    border-top: 1px solid #bdc3c7;
-    word-spacing: -3px;
-}
-
-/*NOTE STYLE EDIT INFO BOX AND SALE ITEMS*/
-.styleinfo{
-  background-color: #ecf0f1;
-  padding: 15px 15px 30px 15px;
-  max-width: 100%;
-  margin: 0 auto;
-  list-style: none;
-  text-align: center;
-}
-
-
-/* this is the item text*/
-.styleinfo h3{
-  border-bottom: 1px solid #95a5a6;
-  padding-top: 2px;
-  color: #00bc9c;
-  word-spacing: -2px;
-}
-
-/* this is the text for the style edit*/
-.styleinfo h4{
-  border-bottom: 1px solid #95a5a6;
-  padding-top: 2px;
-  color: #00bc9c;
-  word-spacing: -2px;
-}
-
-.styleinfo p{
-  color: #222222;
-  font-size: 15px
-}
-
-/*NOTE: OVERWROTE THUMBNAIL features*/
-.img-thumbnail{
-  border-radius: 0px;
-  border-color: #fffdff;
-}
-
-
-.thumbnail{
-  background-color: #ecf0f1;
-}
-
-.glyphicon-circle-arrow-right{
-  padding-top: 15px;
-  font-size: 30px;
-}
-
-/*CSS FOR THE Advert PART*/
-
-/*NOTE: USING THIS JUMBOTRON FOR THE LFW15 ADVERT BANNER. THE CAROUSEL IS NOT ACTUALLY A JUMBOTRON*/
-
-.jumbotron {
-    height: 630px;
-    margin-bottom: 0px;
-    background-image: url(../img/lfw153.jpg);
-    background-position:0% 25%;
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-
-.advert{
-    text-align: center;
-    padding-top: 60px;
-}
-
-.advert h1{
-
-    color: #00bc9c;
-    text-shadow: #444 0 1px 1px;
-}
-
-.advert p{
-    padding-top: 20px;
-    font-size: 25px;
-
-    color: #fffdff;
-    text-shadow: #444 0 1px 1px;
-}
-
-
-/*NOTE: THIS IS FOR THE IMAGE ON THE RIGHT*/
-.advert-section img {
-  width: 800px;
-  height: 533px;
-}
-
-/* NOTE GLYPH ICONS ARE SET TO COLOUR OF TEXT. THESE CAN BE CHANGED IN CSS*/
-.glyphicon{
-    color: #00bc9c;
-}
-/*note changing individual icons*/
-/*THIS IS THE SITE BRAND LOGO*/
-.glyphicon-gift
-{
-    color: #fffdff;
-}
-
-/*THIS IS THE SALE TAG THAT IS NEXT TO THE DISCOUNTED PRICES*/
-.glyphicon-tag{
-
-  color: #e74c3c; 
-
-}
-
-/*NOTE: USING A SPACE BETWEEN TWO ELEMENTS REFER TO DIFFERENT THINGS.
-".pull-right.img-responsive" WITH NO SPACE REFERS TO ONLY AN ELEMENT WITH
-.pull-right.img-responsive, WHEREAS WITH A SPACE WILL REFER TO ANYTHING
-WITH EVEN ONE OF THOSE CLASS ATTRIBUTES */
-.pull-right.img-responsive
-{
-	margin: 0 0 1em 1em;
-	/*changin surrounding area between text and image*/
-	/*REMEMBER "TRBL" =TOP, RIGHT, BOTTOM, LEFT WHEN REFERING TO SPACES AROUND IMAGE*/
-}
-
-
-/*NOTE HOW TO CHANGE BUTTON ATTRIBUTES.
-NOTE: REFER TO BUTTON CLASS IN THIS CASE IT IS "BTN-MORE" BUT IT HAS TO CHANGE DEPENDING ON WHAT 
-BUTTON TYPE WAS GIVEN*/
-/*NOTE COLOR OF SALE BUTTON*/
-.btn-more{
-	background-color: #00bc9c;
-	color: #fff;
-}
-
-.btn-more:hover,
-.btn-more:focus,
-.btn-more:active,
-.btn-more:active,
-.open .dropdown-toggle.btn-sign {
-    color:#ffffff;
-    background-color: #16a085;
-    border-color: #16a085;
-}
-
-
-/*CHANGING COLOR OF SIGNIN/LOGIN BUTTONS*/
-.sign{
-  padding-top: 7px;
-}
-
-.btn-sign{
-    background-color: #fff;
-    color: #222222;  
-}
-
-.btn-sign:hover,
-.btn-sign:focus,
-.btn-sign:active,
-.btn-sign:active,
-.open .dropdown-toggle.btn-sign {
-	color:#ffffff;
-	background-color: #16a085;
-	border-color: #16a085;
-}
-
-/*NOTE: CART BUTTON in nav bar*/
-.glyphicon-shopping-cart{
-  color: #222222;
-}
-
-.cart{
-  padding-top: 7px;
-}
-
-.btn-cart{
-  background-color: #fffdff;
-  color: #222222;  
-}
-
-.btn-cart:hover,
-.btn-cart:focus,
-.btn-cart:active,
-.btn-cart:active,
-.open .dropdown-toggle.btn-cart {
-  color:#ffffff;
-  background-color: #16a085;
-  border-color: #16a085;
-}
-
-
-
-footer{
-  padding: 20px;
-  text-align: center;
-  background-color: #222222;
-
-}
-
-/*NOTE: CSS FOR THE CONTACT SECTION OF THE FOOTER*/ 
-.footer-contact {
-  padding: 20px 20px 50px 20px;
-  max-width: 100%;
-  margin: 0 auto;
-  list-style: none;
-  text-align: center;
-}
-
-.footer-contact li {
-  display: inline-block;
-  width: 440px;
-  margin: 0;
-  text-align: left;
-  position: relative;
-}
-/*NOTE: TEXT STYLING FOR THE FOOTER CONTACT SECTION*/
-.footer-contact h4{
-color: #00bc9c;
-}
-.footer-contact p{
-color: #fffdff;
-}
-
-/*NOTE THIS IS THE STYLING FOR THE MENU AT THE FOOTER*/
-.footer-menu li {
-  display: inline-block;
-  width: 440px;
-  margin: 0;
-  text-align: left;
-  position: relative;
-}
-/*NOTE: TEXT STYLING FOR THE FOOTER menu SECTION*/
-.footer-menu h4{
-color: #00bc9c;
-}
-.footer-menu p{
-color: #fffdff;
-}
-
-/*NOTE THIS IS THE STYLING FOR THE signupto newsletter AT THE FOOTER*/
-.footer-news li {
-  display: inline-block;
-  width: 440px;
-  margin: 0;
-  text-align: left;
-  position: relative;
-}
-/*NOTE: TEXT STYLING FOR THE FOOTER signup to newsletter SECTION*/
-.footer-news h4{
-color: #00bc9c;
-}
-.footer-news p{
-color: #fffdff;
-}
-
-.pages-end p{
-color: #ecf0f1;
-font-size: 10px;
-text-align: center;
-}
-
-
-
-
-/*IMAGE HOVER EFFECT*/
-
-/* Caption Style 4 */
-.cs-style-4 li {
-  -webkit-perspective: 1700px;
-  -moz-perspective: 1700px;
-  perspective: 1700px;
-  -webkit-perspective-origin: 0 50%;
-  -moz-perspective-origin: 0 50%;
-  perspective-origin: 0 50%;
-}
-
-.cs-style-4 figure {
-  -webkit-transform-style: preserve-3d;
-  -moz-transform-style: preserve-3d;
-  transform-style: preserve-3d;
-}
-
-.cs-style-4 figure > div {
-  overflow: hidden;
-}
-
-.cs-style-4 figure img {
-  -webkit-transition: -webkit-transform 0.4s;
-  -moz-transition: -moz-transform 0.4s;
-  transition: transform 0.4s;
-}
-
-/*NOTE THIS EFFECTS HOW FAR OUT THE IMAGE SLIDES*/
-.no-touch .cs-style-4 figure:hover img,
-.cs-style-4 figure.cs-hover img {
-  -webkit-transform: translateX(25%);
-  -moz-transform: translateX(25%);
-  -ms-transform: translateX(25%);
-  transform: translateX(25%);
-}
-
-/*EFFECTS HOW INFO PANEL LOOKS*/ 
-.cs-style-4 figcaption {
-  height: 100%;
-  width:40%;
-  opacity: 0;
-  -webkit-backface-visibility: hidden;
-  -moz-backface-visibility: hidden;
-  backface-visibility: hidden;
-  -webkit-transform-origin: 0 0;
-  -moz-transform-origin: 0 0;
-  transform-origin: 0 0;
-  -webkit-transform: rotateY(-90deg);
-  -moz-transform: rotateY(-90deg);
-  transform: rotateY(-90deg);
-  -webkit-transition: -webkit-transform 0.4s, opacity 0.1s 0.3s;
-  -moz-transition: -moz-transform 0.4s, opacity 0.1s 0.3s;
-  transition: transform 0.4s, opacity 0.1s 0.3s;
-}
-
-.no-touch .cs-style-4 figure:hover figcaption,
-.cs-style-4 figure.cs-hover figcaption {
-  opacity: 1;
-  -webkit-transform: rotateY(0deg);
-  -moz-transform: rotateY(0deg);
-  transform: rotateY(0deg);
-  -webkit-transition: -webkit-transform 0.4s, opacity 0.1s;
-  -moz-transition: -moz-transform 0.4s, opacity 0.1s;
-  transition: transform 0.4s, opacity 0.1s;
-}
-
-/*EFFECTS POSITION OF SEE MORE BUTTON*/
-.cs-style-4 figcaption a {
-  position: absolute;
-  bottom: 20px;
-  right: 20px;
-}
-
-.grid {
-  padding: 20px 20px 100px 20px;
-  max-width: 1300px;
-  margin: 0 auto;
-  list-style: none;
-  text-align: center;
-}
-
-.grid li {
-  display: inline-block;
-  width: 440px;
-  margin: 0;
-  padding: 20px;
-  text-align: left;
-  position: relative;
-}
-
-.grid figure {
-  margin: 0;
-  position: relative;
-}
-
-.grid figure img {
-  max-width: 100%;
-  max-height: 80%;
-  display: block;
-  position: relative;
-  padding-top: 20px;
-  padding-bottom: 20px;
-}
-
-/*position of text in panel*/
-.grid figcaption {
-  position: absolute;
-  top: 0;
-  left: 0;
-  padding: 20px;
-  background: #ecf0f1;
-}
-
-
-/*NOTE: THIS IS HOW YOU STYLE TEXT SPACING*/
-/*NOTE: THIS IS for the top two sale pieces*/
-.grid figcaption h3 {
-  margin: 0;
-  color: #222222;
-  padding-bottom: 25px;
-}
-
-.grid figcaption p {
-  margin: 0;
-  color: #00bc9c;
-}
-
-/*THIS IS FOR THE 3x4 COL*/
-.grid figcaption h4 {
-  margin: 0;
-  color: #222222;
-  padding-bottom: 25px;
-}
-
-.grid figcaption p {
-  margin: 0;
-  color: #00bc9c;
-}
-
-.grid figcaption span:before {
-  content: 'by ';
-}
-
-.grid figcaption a {
-  text-align: center;
-  padding: 5px 10px;
-  border-radius: 2px;
-  display: inline-block;
-  background: #fffdff;
-  color: #222222;
-}
-
-/**************************END INDEX PAGE CSS*****************************/
-
-
-/*************************CSS FOR THE LEVEL 2*****************************/
-/*CSS FOR DASHBOARD*/
-.dashboard {
-    height: 700px;
-    padding-top: 125px;
-    list-style: none;
-    background-color: #fffdff;
-
-}
-
-.dashboard li {
-  display: block;
-  padding-bottom: 30px;
-}
-
-/*NOTE COLOR/SIZING OF PRODUCT/SHOP table access BUTTON*/
-.btn-prod{
-  background-color: #00bc9c;
-  color: #fffdff;
-  width: 100%;
-  text-align: left;
-  padding-bottom: 10px;
-  padding-left: 20px;
-  padding-right: 20px;
-}
-
-.btn-prod:hover,
-.btn-prod:focus,
-.btn-prod:active,
-.btn-prod:active {
-    color:#fffdff;
-    background-color: #16a085;
-    border-color: #16a085;
-}
-
-/* NOTE: GLYPHICONS FOR USER INPUT OPTIONS. SHOPS AND PRODUCTS*/
-/*NOTE: HOW TO SIZE GLYPHICONS*/
-.glyphicon-certificate,
-.glyphicon-tags
-{
-    font-size: 35px;
-    color: #fffdff;
-}
-
-/*CSS FOR DASHBOARD description beneath the buttons for both tables.*/
-.dashboarddesc {
-    height: 200px;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    background-color: #222222;
-    border-top: 1px solid #ecf0f1;
-}
-
-.dashboarddesc h1{
-    color: #00bc9c;
-}
-
-.dashboarddesc h3{
-    color: #fffdff;
-}
-
-
-/******************************CSS FOR REGISTER PAGE**************************************/
-/*CSS FOR THE BACKGROUND AND PAGE SIZE*/
-.register-section{
-    height: 800px;
-    background-color: #ecf0f1;
-}
-
-/*table rows and button s together. css effects spacing around it*/
-/*.register{
-    padding-top: 150px;
-    padding-bottom: 30px;
-}
-*/
-
-/*table rows and button s together. css effects spacing around it*/
-/*.register{
-    padding-top: 10px;
-    padding-bottom: 30px;
-    background-color: #ecf0f1;
-    width: 550px;
-}*/
-
-/*Create new account message*/
-/*.register h1{
-    padding-top: 5px;
-    padding-bottom: 10px;
-    color: #222222;
-}
-*/
-/**************************LOGIN PAGE**************************/
-/*CSS FOR THE BACKGROUND AND PAGE SIZE*/
-.jumbotron-login {
-    height: 800px;
-    margin-bottom: 0px;
-    background-image: url(../img/login2.jpeg);
-    background-position:0% 30%;
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-
-/*NOTE: LOGINSECTION REFERS TO THE SAPCE AROUND THE BOX CONTAINING LOGIN INFO. USE THIS TO MOVE THE ENTIRE THING AROUND THE IMAGE*/
-.login-section{
-    padding-top: 80px;
+    .navbar-header > navbar-nav > dropdown-toggle > ul > li > a{
+        color:#fffdff;
+    }
+
+    .navbar 
+    {
+        padding: 20px 0;
+        color: #fffdff;
+        background-color: #00bc9c;
+        -webkit-transition: background .5s ease-in-out,padding .5s ease-in-out;
+        -moz-transition: background .5s ease-in-out,padding .5s ease-in-out;
+        transition: background .5s ease-in-out,padding .5s ease-in-out;
+    }
+
+    .top-nav-collapse 
+    {
+        padding: 0;
+    }
+
+    /*FIND OUT HOW TO REFER TO TEXT COLOUR FOR THE HEADER. MORE SPECIFICALLY WHAT CLASS NAME IT IS UNDER/ MAKE?*/
+
+
+    /*NOTE: SET FADE OUT OVERWRITE FOR SLIDE ON CAROUSEL*/ 
+    .carousel .carousel-inner .item {
+        opacity: 0;
+        -webkit-transition-property: opacity;
+        -moz-transition-property: opacity;
+        -o-transition-property: opacity;
+        transition-property: opacity;
+    }
+    .carousel .carousel-inner .active {
+        opacity: 1;
+    }
+    .carousel .carousel-inner .active.left,
+    .carousel .carousel-inner .active.right {
+        left: 0;
+        opacity: 0;
+        z-index: 1;
+    }
+    .carousel .carousel-inner .next.left,
+    .carousel .carousel-inner .prev.right {
+        opacity: 12;
+    }
+    .carousel .carousel-control {
+        z-index: 2;
+    }
+
+
+    /*NOTE: SETTING THE INDICATOR CIRCLES ON THE SLIDESHOW*/
+    .carousel-indicators li {
+        background-color: #00bc9c;
+        border-color: #00bc9c;
+    }
+
+    .carousel-indicators .active {
+        background-color: #16a085;
+        border-color: #16a085;
+    }
+
+    /*.imageRow{
+            img-size: 80px 60px;
+    }*/
+
+    /*INFO PANEL ON right OF JUMBOTRON*/
+    .info{
+        /*background-color: #990033;*/
+        padding-bottom: 50px;
+    }
+
+    .info h1{
+        text-align: center;
+        text-shadow: #999 0 1px 1px;
+        color: #222222;
+        padding-top: 20px;
+        margin: 0;
+        padding-bottom: 10px;
+        letter-spacing: -1px;
+    }
+
+    /*THIS IS FOR THE NEWYOU TITLE text properties ON THE CAROUSEL AD*/
+    .info h2{
+        text-align: center;
+        text-shadow: #999 0 1px 1px;
+        color: #222222;
+        padding-top: 10px;
+        letter-spacing: -3px;
+    }
+    .info p{
+        text-align: center;
+        text-shadow: #999 0 1px 1px;
+        color: #222222;
+        margin: 0;
+        padding-bottom: 10px;
+    }
+
+    /*NOTE: THIS IS THE COLORED BAR IN THE SIDE PIECE ON THE CAORUSEL*/
+    .salead{
+        margin-top: 20px;
+        width: 100%;
+        height: 80px;
+        background-color: #222222;
+    }
+
+    .salead h2{
+        color: #fffdff;
+        text-align: center;
+        padding-top: 25px;
+        padding-bottom: 15px;
+    }
+
+    /*NOTE COLOR OF SALE BUTTON*/
+    .btn-sale{
+        background-color: #fffdff;
+        border-color: #bdc3c7;
+    }
+
+    .btn-sale:hover,
+    .btn-sale:focus,
+    .btn-sale:active,
+    .btn-sale:active {
+        border-color: #bdc3c7;
+        background-color: #00bc9c;
+    }
+
+
+    /*NOTE: CSS FOR SALE AND CONTACT SECTION HERE*/
+    /*CSS FOR THE SALE HEAD INTRO PART*/
+    .sale-section {
+        height: 200px;
+        background: #222222;
+        border-top: 1px solid #ecf0f1;
+        border-bottom: 1px solid #ecf0f1;
+    }
+
+    .sale-section h1{
+        text-align: left;
+        text-shadow: #999 0 1px 1px;
+        color: #fffdff;
+        padding-top: 30px;
+        padding-bottom: 5px;
+        letter-spacing: -3px;
+    }
+    .sale-section p{
+        text-align: left;
+        text-shadow: #999 0 1px 1px;
+        color: #fffdff;
+        margin: 0;
+        padding-top: 5px;
+        padding-bottom: 15px;
+        letter-spacing: 1px;
+    }
+
+
+
+    /*position of text in panel*/
+    .grid figcaption {
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding: 20px;
+        background: #ecf0f1;
+    }
+
+
+    /*THIS IS FOR THE NON HOVER AREA PRODUCTS*/
+
+    .saleitemrow{
+        padding-top: 50px;
+    }
+
+
+    .sale-info-box h3 {
+        margin: 0;
+        color: #222222;
+        padding-bottom: 25px;
+    }
+
+    .sale-info-box p {
+        margin: 0;
+        color: #00bc9c;
+        padding-bottom: 5px;
+    }
+
+    .sale-info-box a {
+        text-align: center;
+        padding: 5px 10px;
+        border-radius: 2px;
+        display: inline-block;
+        background: #bdc3c7;
+        color: #222222;
+    }
+
+    /*CSS FOR THE style edit PART*/
+    .style-section {
+        height: 600px;
+        padding-top: 30px;
+        padding-bottom: 15px;
+        text-align: left;
+        background-color: #222222;
+        color: #fffdff;
+        border-top: 1px solid #bdc3c7;
+        word-spacing: -3px;
+    }
+
+    .style-section h1{
+        color: #00bc9c;
+        word-spacing: -5px;
+    }
+
+    .style-section p{
+        color: #fffdff;
+        word-spacing: -2px;
+    }
+
+
+    /*NOTE STYLE EDIT INFO BOX AND SALE ITEMS*/
+    .styleinfo{
+        background-color: #ecf0f1;
+        padding: 15px 15px 30px 15px;
+        max-width: 100%;
+        margin: 0 auto;
+        list-style: none;
+        text-align: center;
+    }
+
+
+    /* this is the item text*/
+    .styleinfo h3{
+        border-bottom: 1px solid #95a5a6;
+        padding-top: 2px;
+        color: #00bc9c;
+        word-spacing: -2px;
+    }
+
+    /* this is the text for the style edit*/
+    .styleinfo h4{
+        border-bottom: 1px solid #95a5a6;
+        padding-top: 2px;
+        color: #00bc9c;
+        word-spacing: -2px;
+    }
+
+    .styleinfo p{
+        color: #222222;
+        font-size: 15px
+    }
+
+    /*NOTE: OVERWROTE THUMBNAIL features*/
+    .img-thumbnail{
+        border-radius: 0px;
+        border-color: #fffdff;
+    }
+
+
+    .thumbnail{
+        background-color: #ecf0f1;
+    }
+
+    .glyphicon-circle-arrow-right{
+        padding-top: 15px;
+        font-size: 30px;
+    }
+
+    /*CSS FOR THE Advert PART*/
+
+    /*NOTE: USING THIS JUMBOTRON FOR THE LFW15 ADVERT BANNER. THE CAROUSEL IS NOT ACTUALLY A JUMBOTRON*/
+
+    .jumbotron {
+        height: 630px;
+        margin-bottom: 0px;
+        background-image: url(../img/lfw153.jpg);
+        background-position:0% 25%;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    .advert{
+        text-align: center;
+        padding-top: 60px;
+    }
+
+    .advert h1{
+
+        color: #00bc9c;
+        text-shadow: #444 0 1px 1px;
+    }
+
+    .advert p{
+        padding-top: 20px;
+        font-size: 25px;
+
+        color: #fffdff;
+        text-shadow: #444 0 1px 1px;
+    }
+
+
+    /*NOTE: THIS IS FOR THE IMAGE ON THE RIGHT*/
+    .advert-section img {
+        width: 800px;
+        height: 533px;
+    }
+
+    /* NOTE GLYPH ICONS ARE SET TO COLOUR OF TEXT. THESE CAN BE CHANGED IN CSS*/
+    .glyphicon{
+        color: #00bc9c;
+    }
+    /*note changing individual icons*/
+    /*THIS IS THE SITE BRAND LOGO*/
+    .glyphicon-gift
+    {
+        color: #fffdff;
+    }
+
+    /*THIS IS THE SALE TAG THAT IS NEXT TO THE DISCOUNTED PRICES*/
+    .glyphicon-tag{
+
+        color: #e74c3c; 
+
+    }
+
+    /*NOTE: USING A SPACE BETWEEN TWO ELEMENTS REFER TO DIFFERENT THINGS.
+    ".pull-right.img-responsive" WITH NO SPACE REFERS TO ONLY AN ELEMENT WITH
+    .pull-right.img-responsive, WHEREAS WITH A SPACE WILL REFER TO ANYTHING
+    WITH EVEN ONE OF THOSE CLASS ATTRIBUTES */
+    .pull-right.img-responsive
+    {
+        margin: 0 0 1em 1em;
+        /*changin surrounding area between text and image*/
+        /*REMEMBER "TRBL" =TOP, RIGHT, BOTTOM, LEFT WHEN REFERING TO SPACES AROUND IMAGE*/
+    }
+
+
+    /*NOTE HOW TO CHANGE BUTTON ATTRIBUTES.
+    NOTE: REFER TO BUTTON CLASS IN THIS CASE IT IS "BTN-MORE" BUT IT HAS TO CHANGE DEPENDING ON WHAT 
+    BUTTON TYPE WAS GIVEN*/
+    /*NOTE COLOR OF SALE BUTTON*/
+    .btn-more{
+        background-color: #00bc9c;
+        color: #fff;
+    }
+
+    .btn-more:hover,
+    .btn-more:focus,
+    .btn-more:active,
+    .btn-more:active,
+    .open .dropdown-toggle.btn-sign {
+        color:#ffffff;
+        background-color: #16a085;
+        border-color: #16a085;
+    }
+
+
+    /*CHANGING COLOR OF SIGNIN/LOGIN BUTTONS*/
+    .sign{
+        padding-top: 7px;
+    }
+
+    .btn-sign{
+        background-color: #fff;
+        color: #222222;  
+    }
+
+    .btn-sign:hover,
+    .btn-sign:focus,
+    .btn-sign:active,
+    .btn-sign:active,
+    .open .dropdown-toggle.btn-sign {
+        color:#ffffff;
+        background-color: #16a085;
+        border-color: #16a085;
+    }
+
+    /*NOTE: CART BUTTON in nav bar*/
+    .glyphicon-shopping-cart{
+        color: #222222;
+    }
+
+    .cart{
+        padding-top: 7px;
+    }
+
+    .btn-cart{
+        background-color: #fffdff;
+        color: #222222;  
+    }
+
+    .btn-cart:hover,
+    .btn-cart:focus,
+    .btn-cart:active,
+    .btn-cart:active,
+    .open .dropdown-toggle.btn-cart {
+        color:#ffffff;
+        background-color: #16a085;
+        border-color: #16a085;
+    }
+
+
+
+    footer{
+        padding: 20px;
+        text-align: center;
+        background-color: #222222;
+
+    }
+
+    /*NOTE: CSS FOR THE CONTACT SECTION OF THE FOOTER*/ 
+    .footer-contact {
+        padding: 20px 20px 50px 20px;
+        max-width: 100%;
+        margin: 0 auto;
+        list-style: none;
+        text-align: center;
+    }
+
+    .footer-contact li {
+        display: inline-block;
+        width: 440px;
+        margin: 0;
+        text-align: left;
+        position: relative;
+    }
+    /*NOTE: TEXT STYLING FOR THE FOOTER CONTACT SECTION*/
+    .footer-contact h4{
+        color: #00bc9c;
+    }
+    .footer-contact p{
+        color: #fffdff;
+    }
+
+    /*NOTE THIS IS THE STYLING FOR THE MENU AT THE FOOTER*/
+    .footer-menu li {
+        display: inline-block;
+        width: 440px;
+        margin: 0;
+        text-align: left;
+        position: relative;
+    }
+    /*NOTE: TEXT STYLING FOR THE FOOTER menu SECTION*/
+    .footer-menu h4{
+        color: #00bc9c;
+    }
+    .footer-menu p{
+        color: #fffdff;
+    }
+
+    /*NOTE THIS IS THE STYLING FOR THE signupto newsletter AT THE FOOTER*/
+    .footer-news li {
+        display: inline-block;
+        width: 440px;
+        margin: 0;
+        text-align: left;
+        position: relative;
+    }
+    /*NOTE: TEXT STYLING FOR THE FOOTER signup to newsletter SECTION*/
+    .footer-news h4{
+        color: #00bc9c;
+    }
+    .footer-news p{
+        color: #fffdff;
+    }
+
+    .pages-end p{
+        color: #ecf0f1;
+        font-size: 10px;
+        text-align: center;
+    }
+
+
+
+
+    /*IMAGE HOVER EFFECT*/
+
+    /* Caption Style 4 */
+    .cs-style-4 li {
+        -webkit-perspective: 1700px;
+        -moz-perspective: 1700px;
+        perspective: 1700px;
+        -webkit-perspective-origin: 0 50%;
+        -moz-perspective-origin: 0 50%;
+        perspective-origin: 0 50%;
+    }
+
+    .cs-style-4 figure {
+        -webkit-transform-style: preserve-3d;
+        -moz-transform-style: preserve-3d;
+        transform-style: preserve-3d;
+    }
+
+    .cs-style-4 figure > div {
+        overflow: hidden;
+    }
+
+    .cs-style-4 figure img {
+        -webkit-transition: -webkit-transform 0.4s;
+        -moz-transition: -moz-transform 0.4s;
+        transition: transform 0.4s;
+    }
+
+    /*NOTE THIS EFFECTS HOW FAR OUT THE IMAGE SLIDES*/
+    .no-touch .cs-style-4 figure:hover img,
+    .cs-style-4 figure.cs-hover img {
+        -webkit-transform: translateX(25%);
+        -moz-transform: translateX(25%);
+        -ms-transform: translateX(25%);
+        transform: translateX(25%);
+    }
+
+    /*EFFECTS HOW INFO PANEL LOOKS*/ 
+    .cs-style-4 figcaption {
+        height: 100%;
+        width:40%;
+        opacity: 0;
+        -webkit-backface-visibility: hidden;
+        -moz-backface-visibility: hidden;
+        backface-visibility: hidden;
+        -webkit-transform-origin: 0 0;
+        -moz-transform-origin: 0 0;
+        transform-origin: 0 0;
+        -webkit-transform: rotateY(-90deg);
+        -moz-transform: rotateY(-90deg);
+        transform: rotateY(-90deg);
+        -webkit-transition: -webkit-transform 0.4s, opacity 0.1s 0.3s;
+        -moz-transition: -moz-transform 0.4s, opacity 0.1s 0.3s;
+        transition: transform 0.4s, opacity 0.1s 0.3s;
+    }
+
+    .no-touch .cs-style-4 figure:hover figcaption,
+    .cs-style-4 figure.cs-hover figcaption {
+        opacity: 1;
+        -webkit-transform: rotateY(0deg);
+        -moz-transform: rotateY(0deg);
+        transform: rotateY(0deg);
+        -webkit-transition: -webkit-transform 0.4s, opacity 0.1s;
+        -moz-transition: -moz-transform 0.4s, opacity 0.1s;
+        transition: transform 0.4s, opacity 0.1s;
+    }
+
+    /*EFFECTS POSITION OF SEE MORE BUTTON*/
+    .cs-style-4 figcaption a {
+        position: absolute;
+        bottom: 20px;
+        right: 20px;
+    }
+
+    .grid {
+        padding: 20px 20px 100px 20px;
+        max-width: 1300px;
+        margin: 0 auto;
+        list-style: none;
+        text-align: center;
+    }
+
+    .grid li {
+        display: inline-block;
+        width: 440px;
+        margin: 0;
+        padding: 20px;
+        text-align: left;
+        position: relative;
+    }
+
+    .grid figure {
+        margin: 0;
+        position: relative;
+    }
+
+    .grid figure img {
+        max-width: 100%;
+        max-height: 80%;
+        display: block;
+        position: relative;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    /*position of text in panel*/
+    .grid figcaption {
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding: 20px;
+        background: #ecf0f1;
+    }
+
+
+    /*NOTE: THIS IS HOW YOU STYLE TEXT SPACING*/
+    /*NOTE: THIS IS for the top two sale pieces*/
+    .grid figcaption h3 {
+        margin: 0;
+        color: #222222;
+        padding-bottom: 25px;
+    }
+
+    .grid figcaption p {
+        margin: 0;
+        color: #00bc9c;
+    }
+
+    /*THIS IS FOR THE 3x4 COL*/
+    .grid figcaption h4 {
+        margin: 0;
+        color: #222222;
+        padding-bottom: 25px;
+    }
+
+    .grid figcaption p {
+        margin: 0;
+        color: #00bc9c;
+    }
+
+    .grid figcaption span:before {
+        content: 'by ';
+    }
+
+    .grid figcaption a {
+        text-align: center;
+        padding: 5px 10px;
+        border-radius: 2px;
+        display: inline-block;
+        background: #fffdff;
+        color: #222222;
+    }
+
+    /**************************END INDEX PAGE CSS*****************************/
+
+
+    /*************************CSS FOR THE LEVEL 2*****************************/
+    /*CSS FOR DASHBOARD*/
+    .dashboard {
+        height: 600px;
+        padding-top: 150px;
+        list-style: none;
+        background-color: #fffdff;
+
+    }
+
+    /*THIS IS THE LIST USED TO PUT THE TABLE NAMES IN A HORIZONTAL ROW*/
+    .dashboard li {
+        display: inline;
+        padding-bottom: 15px;
+        padding-right: 10px;
+    }
+
+    /*NOTE COLOR/SIZING OF PRODUCT/SHOP table access BUTTON*/
+    .btn-prod{
+        background-color: #00bc9c;
+        color: #fffdff;
+        width: 45%;
+        text-align: left;
+        padding-bottom: 10px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .btn-prod:hover,
+    .btn-prod:focus,
+    .btn-prod:active,
+    .btn-prod:active {
+        color:#fffdff;
+        background-color: #16a085;
+        border-color: #16a085;
+    }
+
+    /* NOTE: GLYPHICONS FOR USER INPUT OPTIONS. SHOPS AND PRODUCTS*/
+    /*NOTE: HOW TO SIZE GLYPHICONS*/
+    .glyphicon-certificate,
+    .glyphicon-tags,
+    .glyphicon-user,
+    .glyphicon-flag
+    {
+        font-size: 25px;
+        color: #fffdff;
+    }
+
+    /*CSS FOR DASHBOARD description beneath the buttons for both tables.*/
+    .dashboarddesc {
+        height: 180px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        background-color: #222222;
+        border-top: 1px solid #ecf0f1;
+    }
+
+    .dashboarddesc h1{
+        color: #00bc9c;
+    }
+
+    .dashboarddesc h3{
+        color: #fffdff;
+    }
+
+
+    /******************************CSS FOR REGISTER PAGE**************************************/
+    /*CSS FOR THE BACKGROUND AND PAGE SIZE*/
+    .register-section{
+        height: 800px;
+        background-color: #ecf0f1;
+    }
+
+    /**************************LOGIN PAGE**************************/
+    /*CSS FOR THE BACKGROUND AND PAGE SIZE*/
+    .jumbotron-login {
+        height: 800px;
+        margin-bottom: 0px;
+        background-image: url(../img/login2.jpeg);
+        background-position:0% 30%;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    /*NOTE: LOGINSECTION REFERS TO THE SAPCE AROUND THE BOX CONTAINING LOGIN INFO. USE THIS TO MOVE THE ENTIRE THING AROUND THE IMAGE*/
+    .login-section{
+        padding-top: 80px;
+
+    }
+
+    /*table rows and button s together. css effects spacing around it*/
+    .login{
+        padding-top: 10px;
+        padding-bottom: 30px;
+        background-color: #222222;
+        width: 550px;
+    }
+
+    /*welcome back message*/
+    .login h1{
+        padding-top: 5px;
+        padding-bottom: 10px;
+        color: #fffdff;
+        text-align: left;
+    }
+
+    /*THIS IS THE LOGIN BUTTON ON THE LOGIN PAGE*/
+    .btn-login{
+        background-color: #00bc9c;
+        color: #fffdff;
+        text-align: centre;
+        padding-bottom: 6px;
+        padding-left: 6px;
+        padding-right: 6px;
+    }
+
+    .btn-login:hover,
+    .btn-login:focus,
+    .btn-login:active,
+    .btn-login:active {
+        color:#222222;
+        background-color: #fffdff;
+    }
+
+    /*THIS IS THE REGISTER BUTTON ON THE LOGIN PAGE*/
+    .btn-register{
+        background-color: #222222;
+
+        color:#fffdff;
+        text-align: centre;
+        padding-bottom: 6px;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+
+    .btn-register:hover,
+    .btn-register:focus,
+    .btn-register:active,
+    .btn-register:active {
+
+        color: #00bc9c;
+    }
+
+    /**************************CSS FOR VIEW PRODUCTS PAGE************************/
+
+    /*OVERWRITE THE TABLE FEATURES FROM BOOTSRAP.CSS*/
+
+    /*NOTE: THE > THROUGH THE PRODUCT TABLE TO ACCESS THE TABLE HOVER ETC.*/
+    /*.prod-table > table-striped > tbody > tr:nth-child(odd) {
+      background-color: #00bc9c;
+      color: #fffdff;
+    }*/
+    /*.prod-table > table-hover > tbody > tr:hover {
+      background-color: #222222;
+      color: #00bc9c;
+    }*/
+
+    .prod-table a{
+        color: #222222;
+    }
+
+    /* mouse over link */
+    .prod-table a:hover {
+        color: #00bc9c;
+        text-decoration: none;
+    }
+
+    /*CSS FOR THE CREATE NEW SECTION BENEATH THE TABLE*/
+    .prodtabledesc{
+        padding-top: 30px;
+        padding-bottom: 10px;
+        background-color: #222222;
+    }
+
+    .prodtabledesc h1{
+        color: #00bc9c;
+        word-spacing: -7px;
+        padding-top: 10px;
+        padding-bottom: 5px;
+    }
+
+    .prodtabledesc p{
+        color: #fffdff;
+        word-spacing: -1px;
+        padding-top: 10px;
+    }
+
+    .prodtabledesc h2{
+        color: #fffdff;
+        word-spacing: -4px;
+        padding-top: 10px;
+        padding-bottom: 5px;
+    }
+
+    /*NOTE: REMOVED LINK DECORATION FOR the back button*/
+    .prodtabledesc a{
+        color: #fffdff;
+    }
+
+    /* mouse over link */
+    .prodtabledesc a:hover {
+        color: #00bc9c;
+        text-decoration: none;
+    }
+
+
+    /*NOTE THIS IS THE CREATE NEW ITEM SECTION BENEATH THE TABLE TTITLE AND DESCRIPTION BESIDE THE TABLE DATa*/
+    .createnew{
+        width: 100%;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        background-color: #222222;
+    }
     
-}
+    .createnew h3{
+        color: #fffdff;
+        text-align: centre;
+        padding-left: 10px;
+    }
 
-/*table rows and button s together. css effects spacing around it*/
-.login{
-    padding-top: 10px;
-    padding-bottom: 30px;
-    background-color: #222222;
-    width: 550px;
-}
+    /*NOTE: REMOVED LINK DECORATION FOR CREATE NEW*/
+    .createnew a{
+        color: #fffdff;
+    }
 
-/*welcome back message*/
-.login h1{
-    padding-top: 5px;
-    padding-bottom: 10px;
-    color: #fffdff;
-    text-align: left;
-}
-
-/*THIS IS THE LOGIN BUTTON ON THE LOGIN PAGE*/
-.btn-login{
-  background-color: #00bc9c;
-  color: #fffdff;
-  text-align: centre;
-  padding-bottom: 6px;
-  padding-left: 6px;
-  padding-right: 6px;
-}
-
-.btn-login:hover,
-.btn-login:focus,
-.btn-login:active,
-.btn-login:active {
-    color:#222222;
-    background-color: #fffdff;
-}
-
-/*THIS IS THE REGISTER BUTTON ON THE LOGIN PAGE*/
-.btn-register{
-  background-color: #222222;
-  
-  color:#fffdff;
-  text-align: centre;
-  padding-bottom: 6px;
-  padding-left: 5px;
-  padding-right: 5px;
-}
-
-.btn-register:hover,
-.btn-register:focus,
-.btn-register:active,
-.btn-register:active {
+    /* mouse over link */
+    .createnew a:hover {
+        color: #00bc9c;
+        text-decoration: none;
+    }
     
-color: #00bc9c;
-}
+    /*css for the create plus symbol*/
+    .glyphicon-plus{
+        color: #00bc9c;
+        padding-top: 65px;
+        padding-left: 95px;
+        padding-bottom: 10px;
+        font-size: 60px;
+    }
+    
+    /*NOTE: THIS IS THE TABLE CONTAiner div*/
+    .prod-table{
+        background-color: #fffdff;
+    }
 
-/**************************CSS FOR VIEW PRODUCTS PAGE************************/
-
-/*OVERWRITE THE TABLE FEATURES FROM BOOTSRAP.CSS*/
-
-/*NOTE: THE > THROUGH THE PRODUCT TABLE TO ACCESS THE TABLE HOVER ETC.*/
-.prod-table > table-striped > tbody > tr:nth-child(odd) {
-  background-color: #00bc9c;
-  color: #fffdff;
-}
-.prod-table > table-hover > tbody > tr:hover {
-  background-color: #222222;
-  color: #00bc9c;
-}
-
-/*CSS FOR THE CREATE NEW SECTION BENEATH THE TABLE*/
-.createnew{
-
-    padding-top: 10px;
-    padding-bottom: 10px;
-    background-color: #fffdff;
-}
-
-.createnew h1{
-color: #00bc9c;
-word-spacing: -7px;
-padding-top: 5px;
-padding-bottom: 5px;
-}
-
-.createnew p{
-color: #222222;
-word-spacing: -1px;
-padding-top: 5px;
-}
-
-.createnew h2{
-color: #222222;
-word-spacing: -4px;
-padding-top: 5px;
-    padding-bottom: 5px;
-}
-
-/*NOTE: REMOVED LINK DECORATION FOR CREATE NEW*/
-.createnew a{
-    text-decoration: none;
-}
+    /*NOTE: THIS EDITS THE OPTION GLYPHS ON THE RIGHT OF THE TABLE*/
+    .glyphicon-list,
+    .glyphicon-pencil
+    {
+        color: #00bc9c;
+        padding-bottom: 15px;
+        padding-right: 10px;
+        font-size: 20px;
+    }
+    .glyphicon-remove{
+        color: #e74c3c;
+        padding-bottom: 15px;
+        padding-right: 10px;
+        font-size: 20px;
+    }

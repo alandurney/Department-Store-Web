@@ -23,14 +23,14 @@ $shopGateway = new ShopTableGateway($connection);
 
 
 //$statement = $gateway->getProductById($id);
-$products = $gateway->getProductById($id);
-if ($products->rowCount() !== 1) {
+$product = $gateway->getProductById($id);
+if ($product->rowCount() !== 1) {
     die("Illegal request");
 }
 //$row = $statement->fetch(PDO::FETCH_ASSOC);
-$product = $products->fetch(PDO::FETCH_ASSOC);
+$product = $product->fetch(PDO::FETCH_ASSOC);
 
-$shops = $ShopGateway->getShops();
+$shop = $shopsGateway->getShops();
 ?>
 
 <!DOCTYPE html>
@@ -125,23 +125,6 @@ $shops = $ShopGateway->getShops();
                             </span>
                         </td>
                     </tr>
-                   <tr>
-                        <td>Store ID:</td>
-                        <td>
-                            <select name="StoreID">
-                                <option value="-1">No Store</option>
-                                <?php
-                                $s = $shops->fetch(PDO::FETCH_ASSOC);
-                                //LOOP TO RETRIEVE ALL STORE IDS. LOOP REPEATS OVER UNTIL THERE IS NOTHING TO RETURN THE VALUE RETURNS FALSE AND IT ENDS//
-                                while ($s) {
-                                    echo '<option value="' . $s['id'] .'">'. $s['storeID'].'</option>';
-                                    $s = $shops->fetch(PDO::FETCH_ASSOC);
-                                }
-                                ?>
-                            </select>
-                            
-                        </td>
-                    </tr>
                     <tr>
                         <td>Store ID:</td>
                         <td>
@@ -153,10 +136,10 @@ $shops = $ShopGateway->getShops();
                                 while ($s) {
                                     //making a variable and if else loop to display original store id in the edit table.
                                     $selected = "";
-                                    if ($m['id'] == $product['storeID']){
+                                    if ($s['id'] == $product['storeID']){
                                         $selected = "selected";
                                     }
-                                    echo '<option value="' . $s['id'] .'"'. $selected . $s['storeID'].'</option>';
+                                    echo '<option value="' . $s['id'] .'"'. $selected . '>' . $s['shopName'].'</option>';
                                     $s = $shops->fetch(PDO::FETCH_ASSOC);
                                 }
                                 ?>

@@ -1,0 +1,5 @@
+Note: the password and username is N00133840
+
+Otherwise go to register and make a new account.
+
+* link to run php files on server http://avaya/~N00133840/DeptStoreWebApp/index.php

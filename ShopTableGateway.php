@@ -8,11 +8,16 @@ class ShopTableGateway {
         $this->connection = $c;
     }
 
-    public function getShops() {
-        $sqlQuery = "SELECT * FROM shop";
+    public function getShops($sortOrder) {
+        $sqlQuery = "SELECT * FROM shop
+                ORDER BY ".$sortOrder;
         
         $statement = $this->connection->prepare($sqlQuery);
-        $status = $statement->execute();
+        $params = array(
+            "sortOrder" => $sortOrder
+        );
+        
+        $status = $statement->execute($params);
         
         if (!$status) {
             die("Could not retrieve shops");

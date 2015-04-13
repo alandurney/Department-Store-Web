@@ -1,7 +1,7 @@
 <?php
-require_once 'Product.php';
-require_once 'Connection.php';
-require_once 'ProductTableGateway.php';
+//require_once 'Product.php';
+//require_once 'Connection.php';
+//require_once 'ProductTableGateway.php';
 
 //NOTE: THIS IS THE STARTING PAGE WHETHER OR NOT USER IS SIGNED IN. MAKE THIS THE ACCESS TO LEVEL 2 PAGE
 
@@ -13,9 +13,9 @@ if ($id == "") {
 /* require 'ensureUserLoggedIn.php'; */
 /* don't use ensureuserlogin for index as it should display first without need for login */
 
-$connection = Connection::getInstance();
-$gateway = new ProductTableGateway($connection);
-$statement = $gateway->getProducts();
+//$connection = Connection::getInstance();
+//$gateway = new ProductTableGateway($connection);
+//$statement = $gateway->getProducts();
 ?>
 <!DOCTYPE html>
 <html>
@@ -197,13 +197,13 @@ $statement = $gateway->getProducts();
 
         <!--NOTE: INFO PANEL GOES IN HERE-->
         <div class="info col-lg-7 col-md-6 col-sm-5 col-xs-6 pull-right">
+            <h2>TheNewYou</h2>
             <h1>SALE</h1>
             <h1>Up to 25% Off*</h1>
             <div class="salead">
                 <h2>Ends March 16th</h2>
             </div>
             <p>*Selected lines only</p>
-            <h2>TheNewYou</h2>
         </div>
 
     </div><!--END CONTAINING CAR AND  INFO PANEL-->
@@ -431,7 +431,8 @@ $statement = $gateway->getProducts();
                 <!--NOTE: THE COL-12 IS FOR THE BACKGROUND COLOUR AND LAYOUT-->
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                     <!--DESCRIPTION-->
-                    <h1>This Season in Fashion</h1>
+                    <h1>Our Blog</h1>
+                    <p>This Season in Fashion</p>
                     <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
                         <div class="thumbnail">
                             <img src="img/fashtrend2.jpg" alt="">
@@ -501,7 +502,7 @@ $statement = $gateway->getProducts();
                 <li><p><span class="glyphicon glyphicon-earphone"></span> Call Us: 01 23477545</p></li>
                 <li><p><span class="glyphicon glyphicon-globe"></span> Email Us: thenewyou@gmail.com</p></li>
                 <li><!--NOTE: THIS BUTTON FOR LOGIN/SIGNUP APPEARS ONLY ON MD TO SAVE SPAV=CE BY SETTING IT TO ONLY ONE BUTTON-->
-                    <div class="sign hidden-lg visible-md col-md-1  visible-sm col-sm-1">
+                    <div class="sign hidden-lg hidden-md  visible-sm col-sm-1">
                         <a class="btn btn-sign" href="login.php" role="button">Sign In</a>
                     </div></li>
             </ul>
@@ -532,6 +533,7 @@ $statement = $gateway->getProducts();
         <div class="pages-end col-lg-12 col-md-12 col-sm-12 col-xs-12">
             <div class="col-lg-4 col-push-left">
                 <p>Copyright © TheNewYou Retail plc 2015. All rights reserved. Legal Disclaimer.</p>
+                <img src="img/CreditCardLogos.png" alt="">
             </div>            
         </div>
     </footer>

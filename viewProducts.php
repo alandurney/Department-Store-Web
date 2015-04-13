@@ -27,7 +27,6 @@ $statement = $gateway->getProducts();
         <script type="text/javascript" src="js/product.js"></script>
         <script type="text/javascript" src="js/shop.js"></script>
     </head>
-    <body>
     <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
 
         <!--NOTE: USER SEES DISPLAY OF PRODUCT AND STORES TABLES-->
@@ -76,14 +75,22 @@ $statement = $gateway->getProducts();
     </nav><!--end nav class-->
 
     <!----------------------------------END SCROLL HEAD-------------------------------------->
+    
+    
     <!--NOTE THIS IS THE CREATE NEW SECTION next to THE TABLE INFORMATION. -->
-    <div class="createnew col-lg-2">
+    <div class="prodtabledesc col-lg-2">
+        <a href="home.php"><span class="glyphicon glyphicon-arrow-left"></span> Back</a>
         <h1>Products</h1>
         <p>View, Create, Edit, Delete stock information.</p>
-        <a href="createProductForm.php"><img src="img/create.png" alt=""></a>
-        <a href="createProductForm.php"><h2>Create New Product<h2></a>
+        
+        <!--CREATE NEW PART-->
+            <div class="createnew col-lg-2">
+                <a href="createProductForm.php"><span class="glyphicon glyphicon-plus"></span></a>
+                <a href="createProductForm.php"><h3>Create New Product<h3></a>
+            </div>
     </div>
 
+    <!--THIS IS THE DATA TABLE-->
     <div class="prod-table col-lg-10">
         <table class="table table-striped table-condensed table-hover" >
             <thead>
@@ -105,9 +112,9 @@ $statement = $gateway->getProducts();
                     echo '<td>' . $row['price'] . '</td>';
                     echo '<td>' . $row['salePrice'] . '</td>';
                     echo '<td>'
-                    . '<a href="viewProduct.php?id=' . $row['productID'] . '">View</a> '
-                    . '<a href="editProductForm.php?id=' . $row['productID'] . '">Edit</a> '
-                    . '<a class="deleteProduct" href="deleteProduct.php?id=' . $row['productID'] . '">Delete</a> '
+                    . '<a href="viewProduct.php?id=' . $row['productID'] . '"><span class="glyphicon glyphicon-list"></span></a> '
+                    . '<a href="editProductForm.php?id=' . $row['productID'] . '"><span class="glyphicon glyphicon-pencil"></a> '
+                    . '<a class="deleteProduct" href="deleteProduct.php?id=' . $row['productID'] . '"><span class="glyphicon glyphicon-remove"></a> '
                     . '</td>';
                     echo '</tr>';
 
